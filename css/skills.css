@@ -1,0 +1,364 @@
+/* =====================================================
+   Page Layout & Skill Card Styling
+   ===================================================== */
+
+/* --- Main Skills Grid Layout --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem; /* Increased gap */
+    margin-top: 3rem;
+}
+
+/* --- Skill Card Styling --- */
+.skill-card {
+    background: rgba(30, 38, 45, 0.65); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 180, 0.2); /* Subtle glowing border */
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.skill-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(0, 255, 180, 0.5);
+    box-shadow: 0 0 25px var(--primary-color-glow);
+}
+
+/* Card Header (Icon + Title) */
+.skill-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.2);
+}
+
+.skill-card h2 i {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    width: 35px;
+    text-align: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.skill-card:hover h2 i {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+
+.skill-card p {
+    color: var(--text-muted-color);
+    margin-bottom: 1.5rem; /* Increased margin */
+    line-height: 1.7; /* Improved readability */
+    flex-grow: 1;
+}
+
+/* Skill List Styling */
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 2em; /* More space for icon */
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.skill-list li::before {
+    content: '\2714'; /* A nicer checkmark */
+    font-family: 'Font Awesome 6 Free'; /* Use FA for consistency if needed */
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    text-shadow: 0 0 8px var(--primary-color-glow);
+}
+.skill-list li strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* Action Buttons Container */
+.skill-actions {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* =====================================================
+   Interactive Media Viewer (For Video & 3D Assets)
+   ===================================================== */
+.interactive-showcase {
+    /* To help position nav dots correctly */
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.media-viewer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.media-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.media-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.media-viewer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(0, 255, 180, 0.3);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 180, 0.3);
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.media-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    /* Position at bottom of card */
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 255, 180, 0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.nav-dot:hover {
+    background-color: rgba(0, 255, 180, 0.7);
+    transform: scale(1.1);
+}
+.nav-dot.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color-glow);
+    transform: scale(1.2);
+}
+
+
+/* =====================================================
+   INTEGRATED: Image Carousel & Lightbox Styling
+   ===================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-carousel-container {
+    margin: 1.5rem 0 1rem;
+    min-height: 120px;
+}
+.carousel-group {
+    display: none;
+    gap: 1rem;
+}
+.carousel-group.active { display: flex; }
+.showcase-item {
+    flex: 1; min-width: 0; opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+.carousel-group.active .showcase-item:nth-child(1) { animation-delay: 0.1s; }
+.carousel-group.active .showcase-item:nth-child(2) { animation-delay: 0.2s; }
+.carousel-group.active .showcase-item:nth-child(3) { animation-delay: 0.3s; }
+.carousel-group.active .showcase-item:nth-child(4) { animation-delay: 0.4s; }
+
+.showcase-item img {
+    width: 100%; height: auto; display: block;
+    border: 2px solid rgba(0, 255, 180, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 180, 0.1);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.showcase-item a:hover img {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    cursor: pointer;
+}
+
+/* --- Lightbox Styles --- */
+.lightbox-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(18, 18, 18, 0.95);
+    z-index: 1000;
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+.lightbox-overlay.active { opacity: 1; visibility: visible; }
+.lightbox-content {
+    position: relative; max-width: 90vw; max-height: 90vh;
+    transform: scale(0.8); transition: transform 0.4s ease;
+}
+.lightbox-overlay.active .lightbox-content { transform: scale(1); }
+.lightbox-image {
+    max-width: 100%; max-height: 85vh; display: block;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 30px var(--primary-color-glow);
+}
+.lightbox-caption {
+    text-align: center; color: var(--text-color); margin-top: 1rem;
+    font-family: var(--font-secondary); font-size: 1.1rem;
+}
+.lightbox-close, .lightbox-prev, .lightbox-next {
+    position: absolute;
+    background: rgba(30, 30, 30, 0.7);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease; user-select: none; z-index: 1001;
+    display: flex; justify-content: center; align-items: center;
+}
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+.lightbox-close {
+    top: -15px; right: -15px; width: 40px; height: 40px;
+    border-radius: 50%; font-size: 24px;
+}
+.lightbox-prev, .lightbox-next {
+    top: 50%; transform: translateY(-50%); font-size: 30px;
+    padding: 10px 15px; border-radius: 4px;
+}
+.lightbox-prev { left: -70px; }
+.lightbox-next { right: -70px; }
+
+
+/* =====================================================
+   Responsive Adjustments
+   ===================================================== */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .lightbox-prev, .lightbox-next { font-size: 24px; padding: 5px 10px; }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    .lightbox-close { top: 10px; right: 10px; width: 35px; height: 35px; font-size: 20px; }
+    .lightbox-image { max-height: 75vh; }
+}
+
+@media (max-width: 480px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-card h2 { font-size: 1.5rem; }
+    .skill-card { padding: 1.5rem; }
+    .carousel-group.active { flex-wrap: wrap; justify-content: center; }
+    .showcase-item { flex-basis: calc(50% - 0.5rem); }
+}
+
+/* =====================================================
+   Skills Overview
+   ===================================================== */
+.skills-overview {
+    background: rgba(30, 38, 45, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 255, 180, 0.15);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.skills-overview h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    white-space: nowrap; /* Prevents title from wrapping */
+}
+
+.overview-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(0, 255, 180, 0.1);
+    border: 1px solid rgba(0, 255, 180, 0.3);
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: default;
+    user-select: none;
+}
+
+.tag:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--primary-color-glow);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,50 @@
+/* --- Faint Animated Background Styles --- */
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bg-icon {
+    position: absolute;
+    /* This color is passed to the SVG's 'stroke="currentColor"' property */
+    color: var(--primary-color);
+
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    /* These rules help center and scale the SVG inside its container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* A more complex animation for a natural, drifting float effect */
+@keyframes float {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) translateX(10px) rotate(-8deg);
+    }
+    50% {
+        transform: translateY(-30px) translateX(0px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) translateX(-10px) rotate(8deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+}

@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+    <project>
+        <title>Cosmic Sabbath</title>
+        <description><![CDATA[As Lead Gameplay Programmer for this top-down action game, I design and optimise core systems, including UI, audio, and mechanics. My role involves close collaboration with artists and designers, contributing to QA testing and design feedback to ensure a polished experience for its upcoming release.]]></description>
+        <thumbnail>assets/Projects/Cosmic_Sabbath.png</thumbnail>
+        <trailer/>
+        <storeLink>https://cosmic-sabbath.itch.io</storeLink>
+        <website/>
+        <projectCategory>Professional</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Collaborative</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Gameplay Mechanics Development</tag>
+                <tag>UI Programming</tag>
+                <tag>Audio Programming</tag>
+                <tag>Cross-team Collaboration</tag>
+                <tag>QA Testing</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+                <tag>Git</tag>
+                <tag>Discord</tag>
+            </Software>
+        </tags>
+        <startDate>May 2025</startDate>
+        <endDate>Present</endDate>
+    </project>
+
+    <project>
+        <title>Game Completion Website V2</title>
+        <description><![CDATA[A complete redesign of my personal game completion tracker, built with a focus on a polished and responsive front-end experience. This version, using vanilla HTML, CSS, and JavaScript, features a dynamic filtering system, custom CSS animations, interactive audio cues, and expandable sections for game details.]]></description>
+        <thumbnail>assets/Projects/Game_Completion_Website.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website>https://opstersesports.co.uk/Game_Completion_Website/Game_Completions.html</website>
+        <projectCategory>Personal</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Responsive Design</tag>
+                <tag>Interactable Buttons</tag>
+                <tag>Custom CSS Animations</tag>
+                <tag>Reactive Audio Experience</tag>
+                <tag>Intelligent Search Filter</tag>
+            </Mechanics>
+            <Software>
+                <tag>JetBrains WebStorm IDE</tag>
+                <tag>GitHub</tag>
+            </Software>
+        </tags>
+        <startDate>June 2025</startDate>
+        <endDate>August 2025</endDate>
+    </project>
+
+    <project>
+        <title>Opsters eSports Website</title>
+        <description><![CDATA[As the sole developer, I designed and built this eSports community website from the ground up using HTML, CSS, and JavaScript. The project involved creating a fully responsive hub for league information, including interactive tournament brackets and team showcases, along with a complete UI/UX overhaul and SEO best practices.]]></description>
+        <thumbnail>assets/Projects/Opsters_eSports.png</thumbnail>
+        <trailer>https://www.youtube.com/playlist?list=PLX2wAc8k6rYZSfsGsspa2Hy3mT2ehfW6e</trailer>
+        <storeLink/>
+        <website>https://OpsterseSports.co.uk</website>
+        <projectCategory>Personal</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Responsive Design</tag>
+                <tag>DOM Manipulation</tag>
+                <tag>Custom CSS Animations</tag>
+                <tag>SEO Optimization</tag>
+                <tag>asynchronous JavaScript</tag>
+            </Mechanics>
+            <Software>
+                <tag>JetBrains WebStorm IDE</tag>
+                <tag>GitHub</tag>
+            </Software>
+        </tags>
+        <startDate>May 2024</startDate>
+        <endDate>June 2025</endDate>
+    </project>
+
+    <project>
+        <title>Unity Split-Screen Racing Prototype</title>
+        <description><![CDATA[A technical prototype developed in Unity to explore local multiplayer functionalities. This project focuses on a split-screen setup for two players on a single device, complete with independent vehicle controls and dynamic camera switching. A valuable exercise in managing multi-camera setups and input systems.]]></description>
+        <thumbnail>assets/Projects/My_First_Split_Screen_Game_Unity.jpg</thumbnail>
+        <trailer>https://www.youtube.com/embed/9YtyVZtrgm8</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Personal</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Local Multiplayer</tag>
+                <tag>Split-Screen</tag>
+                <tag>Camera Switching</tag>
+                <tag>Input Management</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+            </Software>
+        </tags>
+        <startDate>May 2025</startDate>
+        <endDate>May 2025</endDate>
+    </project>
+
+    <project>
+        <title>Unity Essentials Project</title>
+        <description><![CDATA[This project documents my mastery of Unity's core features through the official Essentials Pathway. I developed skills in 2D/3D scene creation, C# scripting for player interactivity, physics, and particle effects. The final WebGL submission includes multiple scenes and demonstrates a comprehensive understanding of the engine.]]></description>
+        <thumbnail>assets/Projects/Unity_Essentials_Pathway.png</thumbnail>
+        <trailer>https://youtu.be/K55CQFJvhAA</trailer>
+        <storeLink>https://play.unity.com/en/games/98b9bf98-5aa5-4021-9ae5-fe97000a01b8/unity-essentials-project</storeLink>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>2D &amp; 3D Design</tag>
+                <tag>Unity Editor</tag>
+                <tag>Basic C# Scripting</tag>
+                <tag>Content Creation</tag>
+                <tag>Real-time Creation</tag>
+            </Skills>
+            <Software>
+                <tag>Unity</tag>
+            </Software>
+        </tags>
+        <startDate>January 2025</startDate>
+        <endDate>January 2025</endDate>
+    </project>
+
+    <project>
+        <title>My First 2D Game (Unity Essentials)</title>
+        <description><![CDATA[As part of the Unity Essentials Pathway, I created my first 2D game from scratch. The project focused on the fundamentals of 2D development, including implementing physics-based puzzles with pushable objects of varying weights and developing a simple UI system to track remaining collectibles in the level.]]></description>
+        <thumbnail>assets/Projects/My_First_Unity_2D_Game_Jack_Morgan.png</thumbnail>
+        <trailer>https://youtu.be/O37zywf9Z2E</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>2D Physics Interaction</tag>
+                <tag>UI Collectible Counter</tag>
+                <tag>Pushable Objects</tag>
+                <tag>Collectible System</tag>
+            </Mechanics>
+            <Skills>
+                <tag>2D Game Development</tag>
+                <tag>UI Implementation</tag>
+                <tag>Unity 2D Tools</tag>
+            </Skills>
+            <Software>
+                <tag>Unity</tag>
+            </Software>
+        </tags>
+        <startDate>January 2025</startDate>
+        <endDate>January 2025</endDate>
+    </project>
+
+    <project>
+        <title>BlockSumVR</title>
+        <description><![CDATA[BlockSumVR is an educational VR application for the Meta Quest designed to make numeracy learning engaging. Built in Unity, the game uses interactive block manipulation, teleportation-based navigation, and replayable challenges. The core design focuses on gamifying mathematics to create a fun, effective learning tool.]]></description>
+        <thumbnail>assets/Projects/BlockSumVR.png</thumbnail>
+        <trailer>https://youtu.be/kbaF3u8_EQ4</trailer>
+        <storeLink>https://jmorgan-gamedev.itch.io/blocksumvr</storeLink>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>VR (Meta Quest)</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Interactive Cube Manipulation</tag>
+                <tag>Random Number Generation</tag>
+                <tag>Teleportation Navigation</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+                <tag>Oculus SDK</tag>
+            </Software>
+        </tags>
+        <startDate>September 2024</startDate>
+        <endDate>December 2024</endDate>
+    </project>
+
+    <project>
+        <title>Hazard Perception VR</title>
+        <description><![CDATA[A first-class dissertation project, this VR training application for the Meta Quest teaches hazard perception to learner drivers. Developed in Unity, it features AI-driven traffic using A* pathfinding, interactive scenarios with adaptive difficulty, and gamified feedback to improve road safety in a controlled virtual environment.]]></description>
+        <thumbnail>assets/Projects/Hazard_Perception_VR.png</thumbnail>
+        <trailer>https://www.youtube.com/embed/XU9QnQr_wNE</trailer>
+        <storeLink>https://sidequestvr.com/app/39129/hazard-perception-vr</storeLink>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>VR (Meta Quest)</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>AI Programming</tag>
+                <tag>Hazard Detection</tag>
+                <tag>Gamification</tag>
+                <tag>User Interaction</tag>
+                <tag>A* Pathfinding</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+                <tag>Oculus SDK</tag>
+                <tag>Blender</tag>
+            </Software>
+        </tags>
+        <startDate>January 2024</startDate>
+        <endDate>December 2024</endDate>
+    </project>
+
+    <project>
+        <title>Game Completion Website V1</title>
+        <description><![CDATA[The initial version of my Game Completion Website was a full-stack project exploring backend integration. It featured a system for users to add and edit game entries managed through a session-based backend. While data persistence was not implemented, it served as a strong proof of concept for the design refined in V2.]]></description>
+        <thumbnail>assets/Projects/Game_Completion_Website_V1.png</thumbnail>
+        <trailer>https://youtu.be/dXGHHRoJpnw</trailer>
+        <storeLink/>
+        <website>https://opstersesports.co.uk/Game_Completion_Website/Game_Completions.html</website>
+        <projectCategory>Personal</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Backend Server Integration</tag>
+                <tag>Game Entry System</tag>
+                <tag>Game Entry Editing System</tag>
+                <tag>Fancy CSS Game Cards</tag>
+            </Mechanics>
+            <Software>
+                <tag>JetBrains WebStorm IDE</tag>
+                <tag>GitHub</tag>
+            </Software>
+        </tags>
+        <startDate>September 2024</startDate>
+        <endDate>October 2024</endDate>
+    </project>
+
+    <project>
+        <title>Mechanical Revelation</title>
+        <description><![CDATA[A post-apocalyptic FPS game developed in Unity that challenges players with survival-based combat. The project's focus was on advanced AI using behaviour trees and A* pathfinding. It also features dynamic health systems, cinematic cutscenes, and culminates in a complex, scripted boss battle to test player skill.]]></description>
+        <thumbnail>assets/Projects/Mechanical_Revelation.png</thumbnail>
+        <trailer>https://www.youtube.com/embed/SIrEJVDDa18</trailer>
+        <storeLink>https://jackmorgan22.itch.io/mechanical-revelation</storeLink>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>AI Programming</tag>
+                <tag>A* Pathfinding</tag>
+                <tag>Behaviour Trees</tag>
+                <tag>Health &amp; Damage Systems</tag>
+                <tag>Boss Design</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+            </Software>
+        </tags>
+        <startDate>January 2024</startDate>
+        <endDate>April 2024</endDate>
+    </project>
+
+    <project>
+        <title>Mechanical Revelation – Game Design Document</title>
+        <description><![CDATA[A complete Game Design Document (GDD) for a 3D first-person shooter set in a dark, cyberpunk-inspired world. This document is a structured blueprint detailing the open-world flow, AI-driven enemies, weapon mechanics, stealth strategies, mission design, environmental storytelling, accessibility, and sound design.]]></description>
+        <thumbnail>assets/Projects/Mechanical-Revelation-Game-Design-Document.svg</thumbnail>
+        <trailer>https://youtu.be/hNK4HEyoABs</trailer>
+        <storeLink/>
+        <website>assets/PDF/Game-Design-Document-Mechanical-Revelation.pdf</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game Design</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms/>
+        <languages/>
+        <tags>
+            <Mechanics>
+                <tag>Open-World Design</tag>
+                <tag>AI Enemy Design</tag>
+                <tag>Weapon Mechanics</tag>
+                <tag>Stealth Systems</tag>
+                <tag>Mission Design</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Game Design Documentation</tag>
+                <tag>System Design</tag>
+                <tag>Environmental Storytelling</tag>
+                <tag>Accessibility Planning</tag>
+                <tag>Technical Writing</tag>
+            </Skills>
+            <Software>
+                <tag>Documentation Tools</tag>
+            </Software>
+        </tags>
+        <startDate>January 2024</startDate>
+        <endDate>March 2024</endDate>
+    </project>
+
+    <project>
+        <title>ZDungeon Escape - Game Testing Documentation</title>
+        <description><![CDATA[A dedicated Game Testing Document outlining a methodical approach to quality assurance for a game concept. The document includes detailed plans for functionality testing, performance profiling, and AI validation. It features a comprehensive list of test cases for the HUD, environment, and enemy behaviors.]]></description>
+        <thumbnail>assets/Projects/ZDungeon_Escape_Game_Testing_Documentation.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website>assets/PDF/ZDungeons-Testing-Techniques-and-Testing-Plan-Document.pdf</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game Design</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms/>
+        <languages/>
+        <tags>
+            <Mechanics>
+                <tag>Test Case Creation</tag>
+                <tag>Functionality Testing</tag>
+                <tag>Performance Profiling</tag>
+                <tag>AI Validation</tag>
+                <tag>HUD/UI Testing</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Quality Assurance Planning</tag>
+                <tag>Test Strategy Design</tag>
+                <tag>Technical Writing</tag>
+                <tag>System Validation</tag>
+            </Skills>
+            <Software>
+                <tag>Documentation Tools</tag>
+            </Software>
+        </tags>
+        <startDate>November 2023</startDate>
+        <endDate>December 2023</endDate>
+    </project>
+
+    <project>
+        <title>ZDungeon Escape - Game Design Document</title>
+        <description><![CDATA[A comprehensive Game Design Document for a first-person shooter set in a zombie-infested dungeon. This project is a detailed, professional blueprint covering core mechanics, level design, AI behavior, and QA planning. It demonstrates my ability to structure a creative vision into a full production pipeline.]]></description>
+        <thumbnail>assets/Projects/ZDungeon_Escape_Game_Design_Document.jpg</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website>assets/PDF/ZDungeons-Game-Design-Document.pdf</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game Design</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms/>
+        <languages/>
+        <tags>
+            <Mechanics>
+                <tag>Level Architecture Design</tag>
+                <tag>AI Behavior Design</tag>
+                <tag>Combat System Design</tag>
+                <tag>Resource Management</tag>
+                <tag>Boss Battle Design</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Game Design Documentation</tag>
+                <tag>System Design</tag>
+                <tag>Player Experience Planning</tag>
+                <tag>Quality Assurance Planning</tag>
+                <tag>Technical Writing</tag>
+            </Skills>
+            <Software>
+                <tag>Documentation Tools</tag>
+            </Software>
+        </tags>
+        <startDate>November 2023</startDate>
+        <endDate>December 2023</endDate>
+    </project>
+
+    <project>
+        <title>It's A Clown's Dungeon</title>
+        <description><![CDATA[My first-ever game, "It's A Clown's Dungeon" is a simple first-person horror shooter created in Unity. This project was an experiment with core 3D mechanics such as basic enemy AI, player health, UI/Menus, and level prototyping with Probuilder. A valuable learning experience in project architecture and time management.]]></description>
+        <thumbnail>assets/Projects/Its_a_Clowns_Dungeon_Jack_Morgan_First_Game.png</thumbnail>
+        <trailer>https://youtu.be/MSQNhDpC8mM</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>First-Person Shooter (FPS)</tag>
+                <tag>Basic Enemy AI</tag>
+                <tag>Player Health System</tag>
+                <tag>UI Development</tag>
+            </Mechanics>
+            <Skills>
+                <tag>3D Game Development</tag>
+                <tag>Level Prototyping</tag>
+                <tag>Project Scoping</tag>
+                <tag>Version Control</tag>
+            </Skills>
+            <Software>
+                <tag>Unity</tag>
+                <tag>Probuilder</tag>
+            </Software>
+        </tags>
+        <startDate>September 2023</startDate>
+        <endDate>November 2023</endDate>
+    </project>
+
+    <project>
+        <title>Hungry Animals</title>
+        <description><![CDATA[A small-scale Unity project developed to practice fundamental gameplay mechanics. The core focus was on implementing collision detection, projectile spawning (launching food), and object destruction. This exercise also served as an introduction to creating basic UI/HUD elements, including a screen-space crosshair.]]></description>
+        <thumbnail>assets/Projects/Hungry_Animals_Game_Jack_Morgan.png</thumbnail>
+        <trailer>https://youtu.be/kroDQJqtcmA</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Collision Detection</tag>
+                <tag>Projectile Spawning</tag>
+                <tag>Object Destruction</tag>
+                <tag>Crosshair Implementation</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Unity Physics</tag>
+                <tag>UI/HUD Development</tag>
+            </Skills>
+            <Software>
+                <tag>Unity</tag>
+            </Software>
+        </tags>
+        <startDate>September 2023</startDate>
+        <endDate>September 2023</endDate>
+    </project>
+
+    <project>
+        <title>Android Tip Calculator</title>
+        <description><![CDATA[My first published Android application, available on the Google Play Store. This project served as an introduction to native mobile development in Kotlin, focusing on creating a simple, user-friendly utility. The app allows users to quickly calculate tips based on a custom percentage and total bill amount.]]></description>
+        <thumbnail>assets/Projects/Tip-Calculator-Jack-Morgan-Feature-Graphic.jpg</thumbnail>
+        <trailer>https://youtu.be/2q8hovgvSG0</trailer>
+        <website/>
+        <projectCategory>Personal</projectCategory>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Android</platform>
+        </platforms>
+        <languages>
+            <language>Kotlin</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Android Development</tag>
+                <tag>UI/UX Design</tag>
+                <tag>User Input Handling</tag>
+            </Skills>
+            <Software>
+                <tag>Android Studio</tag>
+                <tag>Git</tag>
+            </Software>
+        </tags>
+        <startDate>July 2023</startDate>
+        <endDate>July 2023</endDate>
+    </project>
+
+    <project>
+        <title>Voice-Enabled Google Home Device Synced Book Review Application</title>
+        <description><![CDATA[This project extends a web-based book review app by integrating Google Firebase with Google Home. The key feature is the ability for users to interact via a Google Home device. Using voice commands, users can create new reviews and have existing ones read aloud, demonstrating integration of cloud databases with smart home tech.]]></description>
+        <thumbnail>assets/Projects/Book_Reviews_Application_That_Works_With_Google_Home.png</thumbnail>
+        <trailer>https://youtu.be/9etutGMvF1k</trailer>
+        <storeLink/>
+        <website>https://mi-linux.wlv.ac.uk/~2201053/BookReviewsApp/index.html</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+            <platform>Google Assistant</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Voice-Enabled CRUD</tag>
+                <tag>Smart Home Integration</tag>
+                <tag>Text-to-Speech Output</tag>
+                <tag>Real-time Database Sync</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Cloud &amp; IoT Integration</tag>
+                <tag>API Integration</tag>
+            </Skills>
+            <Software>
+                <tag>Google Firebase</tag>
+                <tag>Google Assistant Platform</tag>
+            </Software>
+        </tags>
+        <startDate>June 2023</startDate>
+        <endDate>June 2023</endDate>
+    </project>
+
+    <project>
+        <title>Google Maps API Experiment</title>
+        <description><![CDATA[A web-based experiment demonstrating the integration of the Google Maps API. This application allows users to search for any location and dynamically updates an embedded map to display the chosen place. It also fetches and shows a corresponding image, providing a simple yet effective example of using external APIs.]]></description>
+        <thumbnail>assets/Projects/Google_Maps_API_Experiment.jpg</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website>https://mi-linux.wlv.ac.uk/~2201053/GoogleMapsAPI/map.html</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>API Integration</tag>
+                <tag>Geolocation Search</tag>
+                <tag>Dynamic Map Display</tag>
+            </Mechanics>
+            <Skills>
+                <tag>API Consumption</tag>
+                <tag>Frontend Development</tag>
+            </Skills>
+            <Software>
+                <tag>Google Maps API</tag>
+                <tag>Google Places API</tag>
+            </Software>
+        </tags>
+        <startDate>June 2023</startDate>
+        <endDate>June 2023</endDate>
+    </project>
+
+    <project>
+        <title>Movie Reviews Web App with Google Firestore</title>
+        <description><![CDATA[This dynamic web application uses HTML, JavaScript, and Google Firestore as a NoSQL database. The app allows users to add, view, edit, and delete movie reviews. It retrieves and displays data from Firestore in real-time, enabling users to sort reviews by any field, demonstrating skills in frontend, NoSQL, and cloud integration.]]></description>
+        <thumbnail>assets/Projects/Movie_Review_Application.png</thumbnail>
+        <trailer>https://youtu.be/ixt6yxirUb8</trailer>
+        <storeLink/>
+        <website>https://mi-linux.wlv.ac.uk/~2201053/MovieReviewsApp/index.html</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>CRUD Operations</tag>
+                <tag>Real-time Data Sync</tag>
+                <tag>Dynamic Sorting</tag>
+                <tag>Cloud Integration</tag>
+            </Mechanics>
+            <Skills>
+                <tag>NoSQL Database Management</tag>
+            </Skills>
+            <Software>
+                <tag>Google Firestore</tag>
+            </Software>
+        </tags>
+        <startDate>May 2023</startDate>
+        <endDate>May 2023</endDate>
+    </project>
+
+    <project>
+        <title>Survey4All Website - Minimum Marketable Product</title>
+        <description><![CDATA[As part of a collaborative academic project, I contributed to the development of Survey4All, an online survey platform. My role involved project management, planning, and team collaboration using tools like Basecamp and GitHub. We successfully delivered a minimum marketable product demonstrating effective teamwork.]]></description>
+        <thumbnail>assets/Projects/Survey4All.PNG</thumbnail>
+        <trailer>https://youtu.be/fdEppeObnjA</trailer>
+        <storeLink/>
+        <website>https://mi-linux.wlv.ac.uk/~2201053/Survey4All/homepage.html</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Collaborative</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+            <language>CSS</language>
+            <language>JavaScript</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Project Management</tag>
+                <tag>Project Planning</tag>
+                <tag>Team Collaboration</tag>
+                <tag>Collaborative Problem-Solving</tag>
+            </Skills>
+            <Software>
+                <tag>Basecamp</tag>
+                <tag>FileZilla</tag>
+                <tag>Discord</tag>
+                <tag>GitHub</tag>
+            </Software>
+        </tags>
+        <startDate>January 2023</startDate>
+        <endDate>May 2023</endDate>
+    </project>
+
+    <project>
+        <title>API-Driven Robot Control and Data Processing</title>
+        <description><![CDATA[This robotics project focuses on integrating Python APIs for high-level control in the CoppeliaSim environment. The robot executes complex, pre-programmed behaviors based on the real-time processing of sensor data, all managed through an API interface, demonstrating a powerful workflow for simulation-based testing.]]></description>
+        <thumbnail>assets/Projects/Real_Time_Sensor_Data_Processing_and_API_Integration.png</thumbnail>
+        <trailer>https://youtu.be/bz6JrKtVbbU</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Simulation</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>API-Driven Control</tag>
+                <tag>Real-time Data Processing</tag>
+                <tag>Simulation-Based Testing</tag>
+                <tag>Programmed Behaviors</tag>
+            </Mechanics>
+            <Skills>
+                <tag>API Integration</tag>
+                <tag>Robotics Programming</tag>
+                <tag>Real-time Systems</tag>
+            </Skills>
+            <Software>
+                <tag>CoppeliaSim</tag>
+                <tag>Jupyter Notebook</tag>
+                <tag>Python APIs</tag>
+            </Software>
+        </tags>
+        <startDate>May 2023</startDate>
+        <endDate>May 2023</endDate>
+    </project>
+
+    <project>
+        <title>Deploying a Static Website on AWS S3 and CloudFront</title>
+        <description><![CDATA[This project demonstrates end-to-end deployment of a static website using core Amazon Web Services. I configured an S3 bucket for static hosting and integrated CloudFront to serve assets via a Content Delivery Network (CDN), improving global performance and showcasing skills in cloud infrastructure and deployment pipelines.]]></description>
+        <thumbnail>assets/Projects/Deploying_a_Static_Website_on_AWS_S3_and_CloudFront.jpg</thumbnail>
+        <trailer>https://youtu.be/vjkbWPEvyMo</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Website</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages>
+            <language>HTML</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Static Site Deployment</tag>
+                <tag>Cloud Hosting</tag>
+                <tag>Content Delivery Network (CDN)</tag>
+                <tag>S3 Bucket Configuration</tag>
+                <tag>CloudFront Distribution</tag>
+            </Mechanics>
+            <Skills>
+                <tag>AWS Infrastructure</tag>
+            </Skills>
+            <Software>
+                <tag>Amazon Web Services (AWS)</tag>
+                <tag>AWS S3</tag>
+                <tag>AWS CloudFront</tag>
+            </Software>
+        </tags>
+        <startDate>April 2023</startDate>
+        <endDate>April 2023</endDate>
+    </project>
+
+    <project>
+        <title>Multi-Sensor Autonomous Navigation (DR-20)</title>
+        <description><![CDATA[An advanced robotics project focused on sensor fusion for robust autonomous navigation. The simulated DR-20 robot integrates data from multiple sensors to build a complete understanding of its environment, allowing it to detect obstacles with greater reliability and adapt its pathfinding in real-time within CoppeliaSim.]]></description>
+        <thumbnail>assets/Projects/Robotics_Advanced_Robotic_Behaviours_and_Sensor_Fusion.png</thumbnail>
+        <trailer>https://youtu.be/p6VVctXpZek</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Simulation</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Sensor Fusion</tag>
+                <tag>Advanced Autonomous Navigation</tag>
+                <tag>Multi-Sensor Integration</tag>
+                <tag>Adaptive Pathfinding</tag>
+                <tag>Obstacle Avoidance</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Data Fusion Techniques</tag>
+                <tag>Robotics Programming</tag>
+                <tag>Control Systems</tag>
+            </Skills>
+            <Software>
+                <tag>CoppeliaSim</tag>
+                <tag>Jupyter Notebook</tag>
+            </Software>
+        </tags>
+        <startDate>April 2023</startDate>
+        <endDate>April 2023</endDate>
+    </project>
+
+    <project>
+        <title>Vision-Controlled Autonomous Robot (DR-20)</title>
+        <description><![CDATA[This project demonstrates an autonomous DR-20 robot navigating its environment using only vision-based control. Inside the CoppeliaSim software, the robot processes real-time image data from its vision sensor to make navigation decisions and control its actuators, showcasing a practical application of computer vision.]]></description>
+        <thumbnail>assets/Projects/Robotics_DR_20_Robot_Motion_and_Vision_Control.png</thumbnail>
+        <trailer>https://youtu.be/m3HlyOlT0MI</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Simulation</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Vision-Based Navigation</tag>
+                <tag>Autonomous Movement</tag>
+                <tag>Real-time Image Processing</tag>
+                <tag>Decision Making</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Computer Vision</tag>
+                <tag>Robotics Programming</tag>
+                <tag>Control Systems</tag>
+            </Skills>
+            <Software>
+                <tag>CoppeliaSim</tag>
+                <tag>Jupyter Notebook</tag>
+            </Software>
+        </tags>
+        <startDate>March 2023</startDate>
+        <endDate>March 2023</endDate>
+    </project>
+
+    <project>
+        <title>Sensor-Driven Obstacle Avoidance Robot</title>
+        <description><![CDATA[A robotics project demonstrating obstacle detection and avoidance using proximity and vision sensors in the CoppeliaSim environment. The robot interprets real-time data from its sensors to make navigation decisions, showcasing basic path planning and reactive motion control as it successfully maneuvers around objects.]]></description>
+        <thumbnail>assets/Projects/Robotics_Sensor_Integration_and_Motion_Control.png</thumbnail>
+        <trailer>https://youtu.be/fnbKJ_MKZjE</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Simulation</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Obstacle Detection</tag>
+                <tag>Obstacle Avoidance</tag>
+                <tag>Sensor Fusion</tag>
+                <tag>Reactive Navigation</tag>
+                <tag>Path Planning</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Robotics Programming</tag>
+                <tag>Sensor Data Processing</tag>
+                <tag>Motion Control</tag>
+            </Skills>
+            <Software>
+                <tag>CoppeliaSim</tag>
+                <tag>Jupyter Notebook</tag>
+            </Software>
+        </tags>
+        <startDate>February 2023</startDate>
+        <endDate>February 2023</endDate>
+    </project>
+
+    <project>
+        <title>Line-Tracing Robot</title>
+        <description><![CDATA[A line-tracing robot developed in the CoppeliaSim environment as part of a robotics module. The robot uses simulated infrared sensors to detect a predefined path and dynamically adjusts its motor controls based on real-time feedback to accurately follow the line, demonstrating core principles of control systems.]]></description>
+        <thumbnail>assets/Projects/Robotics_Line_Tracing_Robot_Project.png</thumbnail>
+        <trailer>https://youtu.be/OZtTZ5vtNbQ</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Simulation</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Line Tracing</tag>
+                <tag>Path Following Algorithm</tag>
+                <tag>Real-time Sensor Feedback</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Robotics Programming</tag>
+                <tag>Sensor Data Processing</tag>
+                <tag>Control Systems</tag>
+            </Skills>
+            <Software>
+                <tag>CoppeliaSim</tag>
+                <tag>Jupyter Notebook</tag>
+            </Software>
+        </tags>
+        <startDate>January 2023</startDate>
+        <endDate>January 2023</endDate>
+    </project>
+
+    <project>
+        <title>Noughts and Crosses Python Game</title>
+        <description><![CDATA[A classic Noughts and Crosses (Tic-Tac-Toe) game implemented in Python, pitting a human player against a strategic AI opponent. The program features a text-based console interface and a persistent leaderboard system, allowing players to save their scores to a file, demonstrating skills in file I/O and data management.]]></description>
+        <thumbnail>assets/Projects/Noughts_and_Crosses_Python_Game.png</thumbnail>
+        <trailer>https://youtu.be/WaAqIzuo9f0</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Strategic AI Opponent</tag>
+                <tag>Turn-Based Gameplay</tag>
+                <tag>Score Tracking</tag>
+                <tag>Persistent Leaderboard</tag>
+                <tag>Console Interface</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Algorithm Implementation</tag>
+                <tag>File I/O</tag>
+                <tag>Data Management</tag>
+                <tag>Input Validation</tag>
+            </Skills>
+            <Software>
+                <tag>Python</tag>
+            </Software>
+        </tags>
+        <startDate>November 2022</startDate>
+        <endDate>December 2022</endDate>
+    </project>
+
+    <project>
+        <title>Caesar Cipher Python Program</title>
+        <description><![CDATA[A Python program that implements the Caesar Cipher, a classic encryption technique. This console tool allows users to encrypt and decrypt text from both direct input and external files. It serves as an efficient utility for encoding messages and a practical demonstration of basic cryptographic algorithms and file handling.]]></description>
+        <thumbnail>assets/Projects/Jack_Morgan_Caesar_Cipher_Python_Program_Encrypt_and_Decrypt_Text_from_Console_and_Files.png</thumbnail>
+        <trailer>https://youtu.be/-uP_4wljYHU</trailer>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Text Encryption</tag>
+                <tag>Text Decryption</tag>
+                <tag>File I/O</tag>
+                <tag>Console Interface</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Algorithm Implementation</tag>
+                <tag>Python Scripting</tag>
+            </Skills>
+            <Software>
+                <tag>Python</tag>
+            </Software>
+        </tags>
+        <startDate>September 2022</startDate>
+        <endDate>October 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino PIR Motion Sensor Security System</title>
+        <description><![CDATA[A hardware prototype designed in Tinkercad that demonstrates a physical security system using an Arduino R3. The circuit integrates a PIR motion sensor to detect movement. When triggered, it activates NeoPixel light strips, a Piezo buzzer, and an LCD screen, exploring principles of sensor-based automation.]]></description>
+        <thumbnail>assets/Projects/Circuit_Design_Mini_Project_Tinkercad_Arduino.jpg</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website>https://www.tinkercad.com/things/dXqFOmP6cc2?sharecode=PP2-hcEL7q78cD8HB95_4rvqaO9XrmaYbYGekLxAeT8</website>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Motion Detection</tag>
+                <tag>Sensor Integration</tag>
+                <tag>Multi-Output Alerts</tag>
+                <tag>Physical Security Prototyping</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Circuit Design</tag>
+                <tag>Arduino Programming</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>January 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Sensor-Activated Servo Control (Wiper System)</title>
+        <description><![CDATA[A Tinkercad project simulating an automated windscreen wiper system using an Arduino. The circuit integrates a temperature sensor to gather environmental data and uses that input to control the sweeping motion of a servo motor. This demonstrates a complete sensing, processing, and actuation feedback loop.]]></description>
+        <thumbnail>assets/Projects/Embedded_Systems_Windscreen_Wiper_Code_Using_Servos_and_Temperature_Sensor.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Servo Control</tag>
+                <tag>Sensor Integration</tag>
+                <tag>Automated System</tag>
+                <tag>Environment Reactive</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Mechatronics</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+                <tag>Sensor Data Processing</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>May 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino Multi-Axis Stepper Motor Control</title>
+        <description><![CDATA[A Tinkercad simulation demonstrating the control of two stepper motors simultaneously from a single Arduino. This project introduces the challenge of managing multiple motors for coordinated movement, a foundational concept for creating multi-axis systems like CNC machines, 2D plotters, or robotic arms.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Stepper_Motors.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Multi-Motor Control</tag>
+                <tag>Stepper Motor Control</tag>
+                <tag>Coordinated Movement</tag>
+                <tag>Multi-Axis Control</tag>
+            </Mechanics>
+            <Skills>
+                <tag>System Synchronization</tag>
+                <tag>Robotics Actuation</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>May 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino Stepper Motor Control</title>
+        <description><![CDATA[A Tinkercad simulation demonstrating how to control a stepper motor using an Arduino. This project covers the fundamentals of sending precise, step-by-step commands to achieve controlled rotational movement. Stepper control is a crucial skill for applications requiring high precision, like robotics and 3D printers.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Stepper_Motor.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Stepper Motor Control</tag>
+                <tag>Precise Rotational Control</tag>
+                <tag>Step Sequencing</tag>
+                <tag>Motor Driving</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Robotics Actuation</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>May 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Inter-Arduino Communication via Serial I/O</title>
+        <description><![CDATA[A Tinkercad simulation showing serial communication between two Arduino microcontrollers. By connecting their hardware TX (transmit) and RX (receive) pins, this project establishes a reliable data link for exchanging information, demonstrating a standard and robust method for multi-processor embedded systems.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Arduinos_Using_Serial_I_O.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Serial Communication</tag>
+                <tag>UART Communication</tag>
+                <tag>Inter-MCU Communication</tag>
+                <tag>Data Exchange</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Hardware Interfacing</tag>
+                <tag>Communication Protocols</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>May 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Inter-Arduino Communication via Digital Pins</title>
+        <description><![CDATA[A Tinkercad project that demonstrates direct communication between two Arduino microcontrollers using their digital I/O pins. One Arduino acts as a sender and the other as a receiver, showcasing a fundamental method for creating distributed embedded systems where multiple processors must coordinate actions.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Arduinos_Using_Digital_Pins.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Inter-MCU Communication</tag>
+                <tag>Digital Signaling</tag>
+                <tag>Sender/Receiver Logic</tag>
+                <tag>Data Exchange</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Hardware Interfacing</tag>
+                <tag>System Integration</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>May 2022</startDate>
+        <endDate>May 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino PWM for Analog Control</title>
+        <description><![CDATA[A Tinkercad simulation demonstrating Pulse Width Modulation (PWM) with an Arduino. This core technique allows digital output pins to simulate analog signals for precise control over devices. By varying the pulse width, the project shows how to smoothly fade an LED's brightness, a fundamental skill in hardware control.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_PWM.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Pulse Width Modulation (PWM)</tag>
+                <tag>Analog Output Simulation</tag>
+                <tag>LED Fading</tag>
+                <tag>Signal Generation</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Arduino Programming</tag>
+                <tag>Digital to Analog Control</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino 1602 LCD Display Interface</title>
+        <description><![CDATA[A Tinkercad project demonstrating how to interface an Arduino with a 16x2 character LCD. This is a crucial skill in embedded systems, allowing for the display of text, sensor readings, and status messages directly on the hardware without the need for a separate computer or serial monitor for user feedback.]]></description>
+        <thumbnail>assets/Projects/Embedded_Systems_1602_LCD_Display.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>LCD Display Integration</tag>
+                <tag>Text Display</tag>
+                <tag>Character Output</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Component Interfacing</tag>
+                <tag>User Interface Design</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>RGB LED Control with Switches</title>
+        <description><![CDATA[An Arduino project simulated in Tinkercad that demonstrates controlling an RGB LED using switch inputs. This circuit allows a user to change the color of the LED by pressing different buttons, showcasing fundamental principles of digital input handling, color mixing (RGB values), and real-time user interaction.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_RGB_LEDS_With_Switches.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>RGB LED Control</tag>
+                <tag>Color Mixing</tag>
+                <tag>User Input Handling</tag>
+                <tag>Digital I/O</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Arduino Programming</tag>
+                <tag>Circuit Design</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino Analog Sensor Calibration</title>
+        <description><![CDATA[An Arduino project in Tinkercad demonstrating the process of calibrating analog sensor data. This technique involves reading raw input from a sensor and mapping its variable values to a defined, usable range. It is a fundamental skill for ensuring sensor readings are accurate and consistent for reliable control of actuators.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Calibrating_Analogue_Information.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Analog Input Reading</tag>
+                <tag>Sensor Calibration</tag>
+                <tag>Data Mapping</tag>
+                <tag>Signal Processing</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+                <tag>Sensor Interfacing</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino Binary-to-Decimal Serial Conversion</title>
+        <description><![CDATA[A Tinkercad simulation demonstrating data processing and serial communication with an Arduino. This project takes a binary value, converts it to its decimal equivalent, and transmits the result to a computer via the serial port, showcasing skills in both data manipulation and real-time monitoring for embedded systems.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Serial_Port_Binary_To_Decimal.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Binary to Decimal Conversion</tag>
+                <tag>Serial Communication</tag>
+                <tag>Data Type Conversion</tag>
+                <tag>Data Transmission</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Algorithm Implementation</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>Arduino Serial Port Communication</title>
+        <description><![CDATA[An Arduino project simulated in Tinkercad demonstrating use of the serial port. This foundational technique allows data to be sent from the microcontroller to a computer's serial monitor, making it an essential tool for debugging code, monitoring live sensor data, and receiving commands in embedded systems.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Serial_Port.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>Serial Communication</tag>
+                <tag>Data Transmission</tag>
+                <tag>Real-time Monitoring</tag>
+            </Mechanics>
+            <Skills>
+                <tag>Debugging Techniques</tag>
+                <tag>Arduino Programming</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>April 2022</startDate>
+        <endDate>April 2022</endDate>
+    </project>
+
+    <project>
+        <title>8-Bit LED Display with Button Inputs</title>
+        <description><![CDATA[A Tinkercad circuit diagram for an 8-bit binary display using eight LEDs, capable of representing values from 0 to 255. The schematic also incorporates eight buttons for user input, designed to be processed by an Arduino, demonstrating a clear schematic layout for an interactive embedded system.]]></description>
+        <thumbnail>assets/Projects/Embedded_Systems_8_LEDS_to_Binary_0-255.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Circuit Design</tag>
+                <tag>Schematic Layout</tag>
+                <tag>Digital Logic</tag>
+                <tag>User Input Handling</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>March 2022</startDate>
+        <endDate>March 2022</endDate>
+    </project>
+
+    <project>
+        <title>Traffic Light Circuit Diagram</title>
+        <description><![CDATA[A simple circuit diagram designed in Tinkercad to represent a four-LED traffic light system for an Arduino. This academic exercise demonstrates a foundational understanding of electronic component layout and the creation of clear schematics for developing and prototyping basic embedded systems.]]></description>
+        <thumbnail>assets/Projects/Embedded_Systems_Traffic_Lights.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Circuit Design</tag>
+                <tag>Schematic Layout</tag>
+                <tag>Embedded Systems</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>March 2022</startDate>
+        <endDate>March 2022</endDate>
+    </project>
+
+    <project>
+        <title>3-Switch and LED Circuit</title>
+        <description><![CDATA[A Tinkercad circuit diagram detailing the layout for a simple embedded system. The design features three switches for user input and corresponding LEDs for visual feedback with an Arduino. This schematic serves as a foundational exercise in designing circuits that handle basic digital Input/Output (I/O) operations.]]></description>
+        <thumbnail>assets/Projects/Embdedded_Systems_Three_Switches_and_LEDS.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Circuit Design</tag>
+                <tag>Schematic Layout</tag>
+                <tag>Digital I/O</tag>
+                <tag>User Input</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>March 2022</startDate>
+        <endDate>March 2022</endDate>
+    </project>
+
+    <project>
+        <title>LED Binary Counter Circuit</title>
+        <description><![CDATA[A circuit diagram created in Tinkercad for a 4-bit binary counter to be used with an Arduino. This schematic details the layout for a system using four LEDs to represent binary digits, capable of displaying counts from 0 (0000) to 15 (1111). The project showcases a clear understanding of digital logic and schematic design.]]></description>
+        <thumbnail>assets/Projects/Embedded_Systems_LED_On_And_Off.png</thumbnail>
+        <trailer/>
+        <storeLink/>
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Robotics</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Arduino</platform>
+        </platforms>
+        <languages>
+            <language>C++</language>
+        </languages>
+        <tags>
+            <Skills>
+                <tag>Circuit Design</tag>
+                <tag>Schematic Layout</tag>
+                <tag>Digital Logic</tag>
+                <tag>Binary Representation</tag>
+            </Skills>
+            <Software>
+                <tag>Tinkercad</tag>
+            </Software>
+        </tags>
+        <startDate>March 2022</startDate>
+        <endDate>March 2022</endDate>
+    </project>
+
+</projects>

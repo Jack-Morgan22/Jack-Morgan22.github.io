@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack Morgan - Projects</title>
+  <link rel="stylesheet" href="css/Global.css">
+  <link rel="stylesheet" href="css/Projects.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<header id="navbar-placeholder"></header>
+
+<main>
+  <div class="container">
+    <h1>My Projects</h1>
+    <p>Here you can explore a collection of my work. Use the filters to find projects based on specific criteria like technology, project type, or platform.</p>
+
+    <!-- Filter Container -->
+    <div class="filter-container">
+
+      <!-- Main Filters -->
+      <div class="main-filters">
+        <div class="filter-group search-group">
+          <label for="search-bar">Search All Projects:</label>
+          <input type="text" id="search-bar" class="search-input" placeholder="e.g., Unity, Web, Robotics">
+        </div>
+        <div class="filter-group">
+          <label for="filter-project-type">Project Type:</label>
+          <select id="filter-project-type" class="filter-select">
+            <option value="all">All Types</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-project-category">Project Category:</label>
+          <select id="filter-project-category" class="filter-select">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-team-type">Team Type:</label>
+          <select id="filter-team-type" class="filter-select">
+            <option value="all">All Team Types</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-language">Programming Language:</label>
+          <select id="filter-language" class="filter-select">
+            <option value="all">All Languages</option>
+          </select>
+        </div>
+        <button id="reset-filters-btn" class="reset-button" title="Clear all filters and search">Reset Filters</button>
+      </div>
+
+      <!-- Specialized Game Development Filters (Dynamically Shown/Hidden) -->
+      <div class="game-filters" id="game-filters-container">
+        <h3 class="filter-section-title">Game Development Filters</h3>
+        <div class="game-filters-grid">
+          <div class="filter-group">
+            <label for="filter-engine">Game Engine:</label>
+            <select id="filter-engine" class="filter-select">
+              <option value="all">All Engines</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-platform">Platform:</label>
+            <select id="filter-platform" class="filter-select">
+              <option value="all">All Platforms</option>
+            </select>
+          </div>
+          <div class="filter-group technology-group">
+            <label for="filter-technology">Technology / Skill:</label>
+            <select id="filter-technology" class="filter-select">
+              <option value="all">All Skills</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="project-count" class="project-count-display"></div>
+
+    <!-- Project cards will be injected here by Search_Filter.js -->
+    <div id="project-grid" class="project-grid">
+      <!-- Loading projects... -->
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer-placeholder"></footer>
+
+<!-- PDF Viewer Modal Structure -->
+<div id="pdf-viewer-overlay" class="pdf-viewer-overlay">
+  <div class="pdf-viewer-content">
+    <button id="pdf-viewer-close" class="pdf-viewer-close-button">&times;</button>
+    <div id="pdf-embed-container" class="pdf-embed-container">
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/Search_Filter.js"></script>
+<script src="js/nav_loader.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* -- Contact Page Specific Styles -- */
+.contact-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--surface-color);
+  border: 1px solid var(--primary-color);
+  /* Toned down the shadow for a more subtle effect */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+  text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px var(--primary-color-glow);
+    margin-bottom: 1.5rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #101010;
+    border: 1px solid #444;
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted-color);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color-glow);
+}
+
+#contact-form .button {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+#contact-form .button:hover {
+    box-shadow: 0 0 15px var(--primary-color-glow);
+    text-shadow: 0 0 5px #000;
+}
+
+#form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.6em; /* Reserve space to prevent layout shift */
+}
+
+.email-fallback {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333; /* A subtle separator line */
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+}
+
+.email-fallback a {
+    font-weight: bold;
+    color: var(--primary-color);
+}

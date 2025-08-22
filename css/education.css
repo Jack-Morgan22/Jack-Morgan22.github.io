@@ -1,0 +1,293 @@
+/* --- Education Page Specific Styles --- */
+
+/* Added a subtle vignette background to focus attention */
+body {
+    background: radial-gradient(ellipse at center, var(--surface-color) 0%, var(--background-color) 70%);
+}
+
+/* Main headline style for the page */
+.page-headline {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-headline h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--primary-color-glow), 0 0 20px rgba(0, 255, 204, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.page-headline p {
+    color: var(--text-muted-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --- Timeline Container (Skill Tree Trunk) --- */
+.timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* The vertical line - the trunk of the skill tree */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px; /* Slightly thicker */
+    background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0) 0%,
+            var(--primary-color) 20%,
+            var(--primary-color) 80%,
+            rgba(0,0,0,0) 100%
+    );
+    box-shadow: 0 0 20px var(--primary-color-glow);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    z-index: 1;
+}
+
+
+/* --- Timeline Item (Skill Branch & Node) --- */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* The horizontal connector line from trunk to the card */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 39px;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color-glow);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: 30px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: 30px;
+}
+
+/* The dot on the timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px; /* Increased size */
+    height: 28px; /* Adjusted for hexagon ratio */
+    background-color: var(--background-color);
+    border: 3px solid var(--primary-color);
+    top: 28px;
+    border-radius: 0; /* Remove rounding */
+    z-index: 2;
+    box-shadow: 0 0 20px var(--primary-color-glow);
+    transition: all 0.4s ease;
+    /* Hexagon shape */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -14px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -14px;
+}
+
+/* Animate the node on hover like unlocking a skill */
+@keyframes spin-glow {
+    0% { transform: rotate(0deg); box-shadow: 0 0 20px var(--primary-color-glow); }
+    100% { transform: rotate(360deg); box-shadow: 0 0 35px 5px var(--primary-color-glow); }
+}
+
+.timeline-item:hover::after {
+    background-color: var(--primary-color);
+    transform: rotate(360deg);
+    box-shadow: 0 0 35px 5px var(--primary-color-glow);
+}
+
+/* -- Skill Description Panel -- */
+
+/* Wrapper for the glowing gradient border effect */
+.timeline-card-wrapper {
+    position: relative;
+    padding: 3px; /* Controls the border thickness */
+    overflow: hidden;
+    /* Angular shape for the wrapper */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+/* The gradient that forms the border */
+.timeline-card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: conic-gradient(
+            var(--primary-color),
+            var(--primary-color-glow),
+            var(--primary-color),
+            #333, /* Dark part of the border */
+            #333,
+            var(--primary-color)
+    );
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+/* The content card is now simpler, placed inside the wrapper */
+.timeline-content {
+    padding: 30px;
+    background-color: #1a1a1a; /* Darker, more contrasty */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* Same angular shape as the wrapper, but slightly smaller */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+
+.timeline-item:hover .timeline-card-wrapper {
+    transform: translateY(-5px);
+}
+
+.timeline-item:hover .timeline-card-wrapper::before {
+    /* Spin the gradient on hover for a cool effect */
+    transform: rotate(180deg);
+}
+
+/* Icon for each major step in the timeline */
+.timeline-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color);
+    transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+    opacity: 0.25;
+}
+
+
+/* Styling content inside the card */
+.timeline-content h2 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    color: #fff; /* Ensure high contrast */
+}
+
+.timeline-date {
+    font-family: var(--font-secondary);
+    color: var(--primary-color); /* Highlight the date */
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.timeline-content p, .timeline-content ul {
+    margin-bottom: 0;
+}
+
+.timeline-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.timeline-content ul li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Using a more tech-y bullet point */
+.timeline-content ul li::before {
+    content: '»';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-weight: bold;
+}
+
+
+/* --- Tags for Modules & Certs (Data Chips) --- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(45, 45, 45, 0.8);
+    color: var(--text-muted-color);
+    padding: 6px 14px;
+    border-radius: 0; /* Remove rounding */
+    font-size: 0.8rem;
+    font-family: var(--font-secondary);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    /* NEW: Angular "data chip" shape */
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 0 100%);
+}
+
+.tag:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05); /* Add a slight pop */
+}
+
+
+/* --- Responsive Design for Timeline --- */
+@media screen and (max-width: 900px) {
+    .page-headline h1 {
+        font-size: 2rem;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 65px; /* Increase padding for icon space */
+        padding-right: 15px;
+        left: 0 !important;
+    }
+
+    .timeline-item::after {
+        left: 8px;
+    }
+
+    /* Hide the connector lines on mobile as they don't make sense */
+    .timeline-item::before {
+        display: none;
+    }
+}

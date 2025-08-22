@@ -1,0 +1,94 @@
+/* --- Flex Box for Tag-like elements (e.g., Skills) --- */
+.skills-flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between tags */
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--surface-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    cursor: default; /* Indicates it's not clickable */
+}
+
+
+/* --- Featured Projects Grid --- */
+.project-grid {
+    display: grid;
+    /* 3 columns on desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image corners are rounded */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--primary-color-glow);
+    border-color: var(--primary-color);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+}
+
+.project-card-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Allows content to expand, pushing footer down */
+}
+
+.project-card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.project-card-footer {
+    padding: 0 1.5rem 1.5rem;
+    text-align: right;
+}
+
+.card-button {
+    padding: 8px 16px; /* Smaller padding for buttons inside cards */
+    font-size: 0.9rem;
+}
+
+
+/* --- Responsive Grid for Projects --- */
+@media (max-width: 992px) {
+    .project-grid {
+        /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        /* 1 column on mobile */
+        grid-template-columns: 1fr;
+    }
+}

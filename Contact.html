@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack Morgan - Contact</title>
+  <link rel="stylesheet" href="css/Global.css">
+  <link rel="stylesheet" href="css/Contact.css">
+  <link rel="stylesheet" href="css/Contact_Background.css">
+</head>
+<body>
+
+<!-- Animated Background -->
+<div id="background-container"></div>
+
+<!-- Navigation Bar -->
+<header id="navbar-placeholder"></header>
+
+<main>
+  <div class="container">
+    <section class="contact-section">
+      <h1>Get In Touch</h1>
+      <p>I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out using the form below.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required placeholder="Your detailed message..."></textarea>
+        </div>
+        <button type="submit" class="button">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+
+      <div class="email-fallback">
+        <p>Alternatively, you can email me directly at <a href="mailto:jackmorgantf@yahoo.com">jackmorgantf@yahoo.com</a>.</p>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer-placeholder"></footer>
+
+<!-- Scripts -->
+<script src="js/nav_loader.js"></script>
+<script src="js/Contact.js"></script>
+<script src="js/Contact_Background.js"></script>
+
+</body>
+</html>
