@@ -311,6 +311,20 @@ function initializePage(projectsData) {
         }
     });
 
+    // --- Mouse Follow Effect for Project Cards (Added for cooler styling) ---
+    projectGrid.addEventListener('mousemove', e => {
+        // This targets all project cards currently on the page
+        for(const card of document.getElementsByClassName("project-card")) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set CSS custom properties which are used by the CSS for the glow effect
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
+    });
+
     resetFiltersBtn?.addEventListener('click', () => { allFilters.forEach(f => { if(f){ if(f.tagName==='SELECT')f.value='all'; else f.value=''; }}); applyFilters(); });
 
     // --- Initial Setup ---
