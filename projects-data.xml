@@ -41,7 +41,7 @@
         <title>Game Completion Website V2</title>
         <description><![CDATA[A complete redesign of my personal game completion tracker, built with a focus on a polished and responsive front-end experience. This version, using vanilla HTML, CSS, and JavaScript, features a dynamic filtering system, custom CSS animations, interactive audio cues, and expandable sections for game details.]]></description>
         <thumbnail>assets/Projects/Game_Completion_Website.png</thumbnail>
-        <trailer/>
+        <trailer>https://www.youtube.com/embed/NIPZkXxLJm4?si=WfsK0DolSeyvhdHl</trailer>
         <storeLink/>
         <website>https://opstersesports.co.uk/Game_Completion_Website/Game_Completions.html</website>
         <projectCategory>Personal</projectCategory>
