@@ -1,166 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack Morgan - Portfolio</title>
-  <link rel="stylesheet" href="css/Global.css">
-  <link rel="stylesheet" href="css/Index_Project_Skills_Flex_Box.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Morgan - Unity Gameplay Programmer</title>
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/Footer.css">
 </head>
 <body>
-<!-- Navigation Bar -->
+<!-- Navbar will be loaded here by nav_loader.js -->
 <header id="navbar-placeholder"></header>
 
 <main>
-  <div class="container">
-    <section id="about">
-      <h2>Who Am I?</h2>
-      <p>
-        My name is Jack Morgan, and I am a Unity Developer and Gameplay Programmer
-        with experience across PC, VR, and console platforms. I graduated with
-        First Class Honours in Computer Science from the University of Wolverhampton,
-        where I worked on projects such as <em>Hazard Perception VR</em>, an educational
-        application designed to teach learner drivers how to spot potential road hazards
-        through immersive VR training.
-      </p>
-      <p>
-        I also developed <em>Mechanical Revelation</em>, my first complete game, which
-        focused on creating advanced AI with intelligent pathfinding and enemy detection
-        mechanics. This project allowed me to explore systems like waypoint navigation,
-        player detection, and responsive enemy behaviour.
-      </p>
-      <p>
-        Since completing my dissertation, I’ve taken on the role of Lead Programmer
-        at Cosmic Sabbath, working on an upcoming horror title. My responsibilities
-        include developing core gameplay mechanics, UI systems, audio programming,
-        and more. This role has strengthened my ability to collaborate in a team
-        environment and refine my technical and creative skills.
-      </p>
-      <a href="cv.html" class="button">
-        View My Full CV
-      </a>
-    </section>
+    <div class="portfolio-dashboard">
 
-    <br><br><br> <!-- Creates a space -->
+        <!-- ======================= SIDEBAR (LEFT PANEL) ======================== -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <img src="assets/Jack_Morgan_Portfolio.png" alt="Jack Morgan" class="profile-picture">
+                <h1 class="profile-name">Jack Morgan</h1>
+                <p class="profile-title">Unity Developer & Gameplay Programmer</p>
+            </div>
+            <p class="sidebar-bio">
+                A detail-oriented programmer with a First-Class Honours in Computer Science, currently leading gameplay development at Cosmic Sabbath. I combine professional experience with a strong academic foundation in creating full game prototypes. My focus is on crafting polished, engaging gameplay mechanics for PC and VR using Unity and C#.
+            </p>
+            <hr class="sidebar-divider">
+            <h3 class="sidebar-heading">Core Skills</h3>
+            <nav class="skills-list">
+                <span class="skill-tag">Unity</span><span class="skill-tag">C#</span>
+                <span class="skill-tag">Gameplay Mechanics</span><span class="skill-tag">AI Programming</span>
+                <span class="skill-tag">VR Development</span><span class="skill-tag">GitHub</span>
+            </nav>
+            <div class="contact-links">
+                <a href="cv.html" class="button">View CV</a>
+                <a href="https://www.linkedin.com/in/your-profile" class="button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </aside>
 
-    <!-- Featured Projects Section -->
-    <section id="featured-projects">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <!-- Project Card 1: Cosmic Sabbath -->
-        <article class="project-card">
-          <img src="assets/Projects/Cosmic_Sabbath.png" alt="Cosmic Sabbath game thumbnail">
-          <div class="project-card-content">
-            <h3>Cosmic Sabbath</h3>
-            <p>As Lead Gameplay Programmer, I design and optimise core gameplay features, including UI, audio, and mechanics systems for this upcoming horror title.</p>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://cosmic-sabbath.itch.io" class="button card-button" target="_blank" rel="noopener noreferrer">View on Itch.io</a>
-          </div>
-        </article>
+        <!-- ===================== MAIN CONTENT (RIGHT PANEL) ===================== -->
+        <section class="main-content">
+            <nav class="panel-nav">
+                <button class="panel-nav-button active" data-target="projects-panel">Featured Projects</button>
+                <button class="panel-nav-button" data-target="about-panel">About Me</button>
+                <button class="panel-nav-button" data-target="activity-panel">Latest Activity</button>
+            </nav>
+            <div class="content-panels">
 
-        <!-- Project Card 2: Hazard Perception VR -->
-        <article class="project-card">
-          <img src="assets/Projects/Hazard_Perception_VR.png" alt="Hazard Perception VR game thumbnail">
-          <div class="project-card-content">
-            <h3>Hazard Perception VR</h3>
-            <p>A VR training app for learner drivers to identify road hazards. Features AI-driven traffic, interactive scenarios, and gamified feedback in an immersive environment.</p>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://sidequestvr.com/app/39129/hazard-perception-vr" class="button card-button" target="_blank" rel="noopener noreferrer">View on SideQuest</a>
-          </div>
-        </article>
+                <div id="projects-panel" class="content-panel active">
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/X2D974sutSs?si=6IxSv6K89EWV7fYz" title="Have You Seen This Man - Game Trailer" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>Have You Seen This Man</h3>
+                                <p>As Lead Gameplay Programmer at Cosmic Sabbath, I design and optimise core gameplay features, including UI, audio, and mechanics systems. I also play a key role in quality assurance, actively identifying and resolving bugs to help further the development of the game.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/XU9QnQr_wNE?si=ahMb7Xg2-EleGLeB" title="Hazard Perception VR - Game Trailer" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>Hazard Perception VR</h3>
+                                <p>A VR training app for learner drivers to identify road hazards. Features AI-driven traffic, interactive scenarios, and gamified feedback in an immersive environment.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/SIrEJVDDa18?si=ryCYzOcrqk2Wtyhu" title="Mechanical Revelation - Game Trailer" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>Mechanical Revelation</h3>
+                                <p>A post-apocalyptic FPS blending survival with AI-driven enemies and a climactic boss battle, showcasing advanced AI design with behaviour trees and A* pathfinding.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/kbaF3u8_EQ4" title="BlockSumVR" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>BlockSumVR</h3>
+                                <p>An educational VR app for the Meta Quest that makes numeracy learning engaging. It uses interactive block manipulation, teleportation, and replayable challenges to gamify mathematics.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/9YtyVZtrgm8" title="Unity Split-Screen Racing Prototype" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>Split-Screen Racing Prototype</h3>
+                                <p>A technical prototype in Unity exploring local multiplayer. It features a split-screen setup for two players, independent vehicle controls, and dynamic camera switching.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="video-container"><iframe src="https://www.youtube.com/embed/NIPZkXxLJm4" title="Game Completion Website V2" frameborder="0" allowfullscreen></iframe></div>
+                            <div class="project-card-content">
+                                <h3>Game Completion Website V2</h3>
+                                <p>A personal game tracker website built with vanilla HTML, CSS, and JS. Features a dynamic filtering system, custom animations, and interactive audio cues for a polished front-end experience.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <a href="projects.html" class="button">Explore My Work</a>
+                </div>
 
-        <!-- Project Card 3: Mechanical Revelation -->
-        <article class="project-card">
-          <img src="assets/Projects/Mechanical_Revelation.png" alt="Mechanical Revelation game thumbnail">
-          <div class="project-card-content">
-            <h3>Mechanical Revelation</h3>
-            <p>A post-apocalyptic FPS blending survival with AI-driven enemies and a climactic boss battle, showcasing advanced AI design with behaviour trees and A* pathfinding.</p>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://jackmorgan22.itch.io/mechanical-revelation" class="button card-button" target="_blank" rel="noopener noreferrer">View on Itch.io</a>
-          </div>
-        </article>
-      </div>
-      <!-- View All Projects Button-->
-      <a href="projects.html" class="button" style="margin-top: 2rem;">View All Projects</a>
-    </section>
-    <!-- End of Featured Projects Section -->
+                <div id="about-panel" class="content-panel">
+                    <div class="text-content">
+                        <!-- TEXT RESTORED -->
+                        <h3>Who Am I?</h3>
+                        <p>My name is Jack Morgan, and I am a Unity Developer and Gameplay Programmer with experience across PC, VR, and console platforms. I graduated with First Class Honours in Computer Science from the University of Wolverhampton, where I worked on projects such as <em>Hazard Perception VR</em>, an educational application designed to teach learner drivers how to spot potential road hazards through immersive VR training.</p>
+                        <br>
+                        <p>I also developed <em>Mechanical Revelation</em>, my first complete game, which focused on creating advanced AI with intelligent pathfinding and enemy detection mechanics. This project allowed me to explore systems like waypoint navigation, player detection, and responsive enemy behaviour.</p>
+                        <br>
+                        <p>For the past five months, I have been the Lead Programmer at Cosmic Sabbath, working on our upcoming horror title <em>Have You Seen This Man</em>. My responsibilities include developing core gameplay mechanics, UI systems, audio programming, and more. This role has strengthened my ability to collaborate within a team environment while refining both my technical expertise and creative problem-solving skills.</p>
+                        <hr>
+                        <h3>Why Unity & Gameplay Programming?</h3>
+                        <p>My passion for Unity development comes from a lifelong love of games and a curiosity about how they are made. Growing up as a gamer, I was fascinated by how different titles create unique experiences. This curiosity led me to found <em>Opsters eSports</em>, a gaming community and competitive team, where I learned a lot about how players interact with games and what makes them enjoyable.</p>
+                        <br>
+                        <p>At university, I discovered how much I enjoyed designing and programming interactive experiences. With my background in Computer Science, I quickly realised that gameplay programming was the perfect way to combine technical knowledge with creativity. Building systems that shape player interaction, such as puzzles, mechanics and dynamic behaviours, is something I find both exciting and rewarding.</p>
+                        <br>
+                        <p>What I enjoy most is bringing ideas to life. Creating mechanics that feel engaging and polished gives players a stronger connection to the game, and that sense of impact is what motivates me to keep improving.</p>
+                    </div>
+                </div>
 
-    <br><br><br> <!-- Creates a space -->
+                <div id="activity-panel" class="content-panel">
+                    <div class="linkedin-embed-container">
+                        <iframe src="https://app.mirror-app.com/feed-linkedin/643fe0b9-8164-4378-abb9-392fa71b5c52/preview" title="LinkedIn Posts"></iframe>
+                    </div>
+                </div>
 
-    <section id="motivation">
-      <h2>Why Unity Development and Gameplay Programming?</h2>
-      <p>
-        My passion for Unity Development comes from a lifelong love of games and a
-        curiosity about how they are built. Growing up as a gamer, I was fascinated
-        by the different ways games create unique experiences. This led me to found
-        <em>Opsters eSports</em>, a gaming community and competitive team, where I
-        gained valuable insight into how players engage with games and what makes
-        them enjoyable.
-      </p>
-      <p>
-        At university, I chose a Game Development module, where I discovered how
-        much I enjoyed designing and programming interactive experiences. With my
-        strong Computer Science background, I quickly realised that gameplay
-        programming was where I could combine my technical skills with my creativity.
-        Developing systems that drive player interaction such as puzzles, mechanics,
-        and dynamic behaviours which are something I find both challenging and rewarding.
-      </p>
-      <p>
-        For me, the real joy of gameplay programming is in bringing ideas to life.
-        Creating mechanics that feel engaging, polished, and meaningful gives players
-        a deeper connection to the game, and that sense of impact is what motivates
-        me to keep building and improving.
-      </p>
-      <a href="education.html" class="button">
-        See Education & Certificates
-      </a>
-    </section>
-
-    <br><br><br> <!-- Creates a space -->
-
-    <!-- Embedding LinkedIn Posts -->
-    <h2> Latest LinkedIn Posts</h2>
-    <iframe src="https://app.mirror-app.com/feed-linkedin/643fe0b9-8164-4378-abb9-392fa71b5c52/preview" style="width: 100%; height: 500px; border: none;"></iframe>
-
-    <br><br><br> <!-- Creates a space -->
-
-    <!-- Skills Flex Box -->
-    <section id="tech-skills">
-      <h2>Highlighted Technical Skills</h2>
-      <p>A quick overview of the key technologies and concepts I'm proficient in:</p>
-      <div class="skills-flex-box">
-        <span class="skill-tag">Unity</span>
-        <span class="skill-tag">C#</span>
-        <span class="skill-tag">GitHub</span>
-        <span class="skill-tag">Gameplay Mechanics</span>
-        <span class="skill-tag">AI Programming</span>
-        <span class="skill-tag">UI Programming</span>
-        <span class="skill-tag">Visual Studio</span>
-        <span class="skill-tag">PC</span>
-        <span class="skill-tag">Audio Systems Programming</span>
-        <span class="skill-tag">VR Development</span>
-        <span class="skill-tag">Pathfinding Algorithms</span>
-        <span class="skill-tag">Remote Teamwork</span>
-      </div>
-    </section>
-    <!-- -->
-
-    <section id="disclaimer" style="margin-top: 3rem;">
-      <p style="font-size: 0.9rem; color: var(--text-muted-color);">
-        <strong>A Note on This Website:</strong> This portfolio was built from scratch by me using only JavaScript, HTML, and CSS in an IDE. I leveraged online resources like documentation, Google, and how-to guides to support development and debug issues, demonstrating practical problem-solving and programming skills.
-      </p>
-    </section>
-  </div>
+            </div>
+        </section>
+    </div>
 </main>
 
-<!-- Footer -->
+<!-- Footer will be loaded here by nav_loader.js -->
 <footer id="footer-placeholder"></footer>
 
-<!-- Scripts-->
+<script src="js/main.js"></script>
 <script src="js/nav_loader.js"></script>
-
 </body>
 </html>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projects>
     <project>
-        <title>Cosmic Sabbath</title>
-        <description><![CDATA[As Lead Gameplay Programmer for this top-down action game, I design and optimise core systems, including UI, audio, and mechanics. My role involves close collaboration with artists and designers, contributing to QA testing and design feedback to ensure a polished experience for its upcoming release.]]></description>
-        <thumbnail>assets/Projects/Cosmic_Sabbath.png</thumbnail>
-        <trailer/>
+        <title>Have You Seen This Man</title>
+        <description><![CDATA[As Lead Gameplay Programmer at Cosmic Sabbath, I design and optimise core gameplay features, including UI, audio, and mechanics systems. I also play a key role in quality assurance, actively identifying and resolving bugs to help further the development of the game.]]></description>
+        <thumbnail>assets/Projects/Have_You_Seen_This_Man_Project.jpg</thumbnail>
+        <trailer>https://www.youtube.com/embed/X2D974sutSs?si=6IxSv6K89EWV7fYz</trailer>
         <storeLink>https://cosmic-sabbath.itch.io</storeLink>
         <website/>
         <projectCategory>Professional</projectCategory>
