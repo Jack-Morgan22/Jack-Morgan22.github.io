@@ -31,12 +31,23 @@ function parseProjectsXML(xmlDoc) {
     };
 
     projectNodes.forEach(node => {
+        // --- NEW: Parse multiple store links ---
+        const storeNodes = node.querySelectorAll("storeLinks > store");
+        const stores = Array.from(storeNodes).map(storeNode => ({
+            name: getText(storeNode, "name"),
+            url: getText(storeNode, "url")
+        }));
+
         const project = {
             title: getText(node, "title"),
             description: getText(node, "description"),
             thumbnail: getText(node, "thumbnail"),
+            // --- NEW: Parse gallery images ---
+            gallery: getArray(node, "gallery > image"),
             trailer: getText(node, "trailer"),
+            // Keep old storeLink for backward compatibility, but prioritize new stores array
             storeLink: getText(node, "storeLink"),
+            stores: stores.length > 0 ? stores : [],
             Website: getText(node, "website"),
             projectCategory: getText(node, "projectCategory"),
             projectType: getText(node, "projectType"),
@@ -200,6 +211,25 @@ function initializePage(projectsData) {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
 
+            // --- NEW: Header Rendering with Carousel Logic ---
+            let headerHTML;
+            if (project.gallery && project.gallery.length > 1) {
+                const images = project.gallery.map((img, index) =>
+                    `<img src="${img}" alt="${project.title} screenshot ${index + 1}" class="carousel-image ${index === 0 ? 'active' : ''}">`
+                ).join('');
+                const dots = project.gallery.map((_, index) =>
+                    `<span class="dot ${index === 0 ? 'active' : ''}" data-index="${index}"></span>`
+                ).join('');
+                headerHTML = `
+                    <div class="image-carousel">
+                        <div class="carousel-images">${images}</div>
+                        <div class="carousel-dots">${dots}</div>
+                    </div>`;
+            } else {
+                // Fallback to the original thumbnail if no gallery or only one image
+                headerHTML = `<img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">`;
+            }
+
             const categoryPill = `<span class="type-pill ${project.projectCategory.toLowerCase().replace(' ','-')}">${project.projectCategory}</span>`;
             const collabPill = `<span class="type-pill">${project.collaborationType}</span>`;
 
@@ -214,23 +244,30 @@ function initializePage(projectsData) {
             const skillsSection = skillsTags ? `<div class="project-details-section"><h6>Skills</h6><div class="project-tags">${skillsTags}</div></div>` : '';
             const softwareSection = softwareTags ? `<div class="project-details-section"><h6>Development Software</h6><div class="project-tags">${softwareTags}</div></div>` : '';
 
-            // --- Footer Button Logic ---
-            const trailerButton = project.trailer ? `<a href="#" class="action-button trailer-button" data-trailer-url="${project.trailer}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4V20L20 12L7 4Z"></path></svg> Watch Trailer</a>` : '';
-            const storeButton = project.storeLink ? `<a href="${project.storeLink}" target="_blank" rel="noopener noreferrer" class="action-button store-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61483 7.84006L12.0006 0.5L15.3864 7.84006L23.4133 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg> Store Page</a>` : '';
-
-            let websiteButton = '';
+            // --- NEW: Footer Button Logic for Multiple Stores ---
+            const footerButtons = [];
+            if (project.trailer) {
+                footerButtons.push(`<a href="#" class="action-button trailer-button" data-trailer-url="${project.trailer}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4V20L20 12L7 4Z"></path></svg> Watch Trailer</a>`);
+            }
+            if (project.stores && project.stores.length > 0) {
+                project.stores.forEach(store => {
+                    footerButtons.push(`<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="action-button store-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61483 7.84006L12.0006 0.5L15.3864 7.84006L23.4133 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg> View on ${store.name}</a>`);
+                });
+            } else if (project.storeLink) { // Fallback for old projects
+                footerButtons.push(`<a href="${project.storeLink}" target="_blank" rel="noopener noreferrer" class="action-button store-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61483 7.84006L12.0006 0.5L15.3864 7.84006L23.4133 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg> Store Page</a>`);
+            }
             if (project.Website) {
                 if (project.Website.endsWith('.pdf')) {
-                    websiteButton = `<a href="${project.Website}" class="action-button website-button pdf-link" data-pdf-src="${project.Website}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> View Document</a>`;
+                    footerButtons.push(`<a href="${project.Website}" class="action-button website-button pdf-link" data-pdf-src="${project.Website}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> View Document</a>`);
                 } else {
-                    websiteButton = `<a href="${project.Website}" target="_blank" rel="noopener noreferrer" class="action-button website-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg> View Website</a>`;
+                    footerButtons.push(`<a href="${project.Website}" target="_blank" rel="noopener noreferrer" class="action-button website-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg> View Website</a>`);
                 }
             }
 
-            const footerButtons = [trailerButton, storeButton, websiteButton].filter(Boolean).join('');
-            const cardFooter = footerButtons ? `<div class="project-card-footer">${footerButtons}</div>` : '';
+            const footerHTML = footerButtons.join('');
+            const cardFooter = footerHTML ? `<div class="project-card-footer">${footerHTML}</div>` : '';
 
-            projectCard.innerHTML = `<div class="project-card-header"><img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail"><div class="project-date">${project.startDate} &ndash; ${project.endDate}</div></div><div class="project-info"><div class="project-types">${categoryPill}${collabPill}</div><h3 class="project-title">${project.title}</h3>${languageSection}<p class="project-description">${project.description}</p>${mechanicsSection}${skillsSection}${softwareSection}</div>${cardFooter}`;
+            projectCard.innerHTML = `<div class="project-card-header">${headerHTML}<div class="project-date">${project.startDate} &ndash; ${project.endDate}</div></div><div class="project-info"><div class="project-types">${categoryPill}${collabPill}</div><h3 class="project-title">${project.title}</h3>${languageSection}<p class="project-description">${project.description}</p>${mechanicsSection}${skillsSection}${softwareSection}</div>${cardFooter}`;
             projectGrid.appendChild(projectCard);
         });
     }
@@ -291,7 +328,7 @@ function initializePage(projectsData) {
     const allFilters = [searchBar, projectTypeFilter, projectCategoryFilter, teamTypeFilter, languageFilter, platformFilter, engineFilter, technologyFilter];
     allFilters.forEach(filter => filter?.addEventListener('input', applyFilters));
 
-    // Delegated Event Listener for dynamic content (trailers, PDFs)
+    // Delegated Event Listener for dynamic content (trailers, PDFs, and NEW carousel)
     projectGrid.addEventListener('click', e => {
         const trailerBtn = e.target.closest('.trailer-button');
         if(trailerBtn) {
@@ -308,6 +345,21 @@ function initializePage(projectsData) {
             } else {
                 openPdfViewer(pdfLink.dataset.pdfSrc);
             }
+        }
+
+        // --- NEW: Carousel Dot Click Handler ---
+        const dot = e.target.closest('.dot');
+        if (dot) {
+            const cardHeader = dot.closest('.project-card-header');
+            const newIndex = parseInt(dot.dataset.index, 10);
+
+            // Deactivate current active elements
+            cardHeader.querySelector('.carousel-image.active').classList.remove('active');
+            cardHeader.querySelector('.dot.active').classList.remove('active');
+
+            // Activate new elements
+            cardHeader.querySelectorAll('.carousel-image')[newIndex].classList.add('active');
+            dot.classList.add('active');
         }
     });
 

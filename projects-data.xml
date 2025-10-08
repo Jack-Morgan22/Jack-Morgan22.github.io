@@ -2,10 +2,38 @@
 <projects>
     <project>
         <title>Have You Seen This Man?</title>
-        <description><![CDATA[As Lead Gameplay Programmer at Cosmic Sabbath, I design and optimise core gameplay features, including UI, audio, and mechanics systems. I also play a key role in quality assurance, actively identifying and resolving bugs to help further the development of the game.]]></description>
+        <description><![CDATA[
+As Lead Gameplay Programmer & Lead QA Tester at Cosmic Sabbath on Have You Seen This Man, I design, implement, and optimise core gameplay systems including interaction, UI, audio, and puzzle mechanics. I also oversee quality assurance, identifying and resolving bugs to ensure a polished and stable player experience.
+]]></description>
+
+
+        <!-- The primary image for the project card -->
         <thumbnail>assets/Projects/Have_You_Seen_This_Man_Promotional_Thumbnail.png</thumbnail>
+
+        <!-- NEW: Gallery for multiple screenshots -->
+        <gallery>
+            <image>assets/Projects/Have_You_Seen_This_Man_Promotional_Thumbnail.png</image> <!-- COVER -->
+            <image>assets/Projects/HYSTM_1.png</image>
+            <image>assets/Projects/HYSTM_2.png</image>
+            <image>assets/Projects/HYSTM_3.png</image>
+            <image>assets/Projects/HYSTM_4.png</image>
+            <image>assets/Projects/HYSTM_5.png</image>
+        </gallery>
+
         <trailer>https://www.youtube.com/embed/X2D974sutSs?si=6IxSv6K89EWV7fYz</trailer>
-        <storeLink>https://cosmic-sabbath.itch.io</storeLink>
+
+        <!-- REPLACED: <storeLink> is now <storeLinks> to support multiple stores -->
+        <storeLinks>
+            <store>
+                <name>Itch.io</name>
+                <url>https://cosmic-sabbath.itch.io/have-you-seen-this-man</url>
+            </store>
+            <store>
+                <name>Steam</name>
+                <url>#</url> <!-- Add your Steam URL when available -->
+            </store>
+        </storeLinks>
+
         <website/>
         <projectCategory>Professional</projectCategory>
         <projectType>Game</projectType>
@@ -31,6 +59,7 @@
                 <tag>Unity</tag>
                 <tag>Git</tag>
                 <tag>Discord</tag>
+                <tag>Trello</tag>
             </Software>
         </tags>
         <startDate>May 2025</startDate>

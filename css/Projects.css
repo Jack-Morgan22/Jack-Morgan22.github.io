@@ -160,7 +160,7 @@
 .project-card > * { z-index: 2; position: relative; } /* Ensure content is above glow */
 
 
-.project-card-header { position: relative; height: 200px; }
+.project-card-header { position: relative; height: 200px; background-color: #1a1a1a; }
 .project-card-header::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 80px; background: linear-gradient(to top, var(--surface-color), transparent); z-index: 3;}
 .project-thumbnail { width: 100%; height: 100%; object-fit: cover; }
 
@@ -217,3 +217,68 @@
 .pdf-viewer-close-button { position: absolute; top: -40px; right: 0; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; line-height: 1; }
 .pdf-embed-container { flex-grow: 1; padding: 15px; }
 .pdf-embed-container iframe { width: 100%; height: 100%; border: none; border-radius: 5px; }
+
+
+/* --- NEW: Image Carousel Styles --- */
+
+.image-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    z-index: 1; /* Images are at the bottom layer */
+}
+
+.carousel-image.active {
+    opacity: 1;
+    z-index: 2; /* Active image comes to the front */
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px; /* Positioned just above the gradient overlay */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 4; /* Must be above images and the header's ::after gradient */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
