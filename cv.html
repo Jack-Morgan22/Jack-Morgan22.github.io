@@ -1,112 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack Morgan - CV</title>
-  <link rel="stylesheet" href="css/Global.css">
-  <style>
-    /* FAILSAFE: Prevent horizontal scrolling (dragging) on the entire page */
-    html, body {
-      overflow-x: hidden;
-      width: 100%;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Morgan - CV</title>
+    <link rel="stylesheet" href="css/Global.css">
+    <style>
+        /* FAILSAFE: Prevent horizontal scrolling (dragging) on the entire page */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
 
-    main {
-      /* Use padding on main for spacing, not the container */
-      padding: 90px 15px 30px 15px; /* 70px navbar + 20px space */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-      background-color: #f9f9f9;
-    }
+        main {
+            /* Use padding on main for spacing, not the container */
+            padding: 90px 15px 30px 15px; /* 70px navbar + 20px space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
 
-    #cv-viewer-container {
-      /* Container now has no padding, only controls width */
-      width: 100%;
-      max-width: 900px; /* Max width on desktops */
-      margin: 0 auto; /* Center it */
-    }
+        #cv-viewer-container {
+            /* Container now has no padding, only controls width */
+            width: 100%;
+            max-width: 900px; /* Max width on desktops */
+            margin: 0 auto; /* Center it */
+        }
 
-    #cv-navigation {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 15px;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: relative;
-    }
+        /* --- NEW --- CV Selection Styling */
+        #cv-selection {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+            gap: 10px; /* Space between buttons */
+            margin-bottom: 20px;
+        }
 
-    #cv-navigation button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s, opacity 0.3s;
-    }
+        #cv-selection button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
 
-    #cv-navigation button:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
+        #cv-selection button:hover {
+            background-color: #5a6268;
+        }
 
-    #cv-navigation button:not(:disabled):hover {
-      background-color: #0056b3;
-    }
+        #cv-selection button.active {
+            background-color: #007bff; /* Highlight color for the active CV */
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+        /* --- END NEW --- */
 
-    #page-indicator {
-      font-size: 1.1em;
-      font-weight: 500;
-      min-width: 100px;
-      text-align: center;
-    }
+        #cv-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
 
-    #loading-indicator {
-      display: none;
-      position: absolute;
-      right: 20px;
-      font-style: italic;
-      color: #555;
-    }
+        #cv-navigation button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
 
-    #pdf-canvas {
-      /* The canvas will now have its size set precisely by JS */
-      display: block;
-      margin: 0 auto; /* Center the canvas within the container */
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+        #cv-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
 
-    body.rendering, body.rendering * {
-      cursor: wait !important;
-    }
-  </style>
+        #cv-navigation button:not(:disabled):hover {
+            background-color: #0056b3;
+        }
+
+        #page-indicator {
+            font-size: 1.1em;
+            font-weight: 500;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        #loading-indicator {
+            display: none;
+            position: absolute;
+            right: 20px;
+            font-style: italic;
+            color: #555;
+        }
+
+        #pdf-canvas {
+            /* The canvas will now have its size set precisely by JS */
+            display: block;
+            margin: 0 auto; /* Center the canvas within the container */
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        body.rendering, body.rendering * {
+            cursor: wait !important;
+        }
+    </style>
 </head>
 <body>
 <!-- Navigation Bar -->
 <header id="navbar-placeholder"></header>
 
 <main>
-  <div id="cv-viewer-container">
-    <div id="cv-navigation">
-      <button id="prev-page" title="Previous Page">&lt; Prev</button>
-      <span id="page-indicator">Page <span id="page-num"></span> of <span id="page-count"></span></span>
-      <button id="next-page" title="Next Page">Next &gt;</button>
-      <span id="loading-indicator">Rendering...</span>
-    </div>
+    <div id="cv-viewer-container">
+        <!-- CORRECTED: CV Selection Buttons -->
+        <div id="cv-selection">
+            <button class="active" data-cv-path="assets/CV/Jack_Morgan_Game_Developer_CV.pdf">Unity / Game Developer</button>
+            <button data-cv-path="assets/CV/Jack_Morgan_Cybersecurity_CV.pdf">CyberSecurity</button>
+            <button data-cv-path="assets/CV/Jack_Morgan_IT_CV.pdf">IT</button>
+        </div>
 
-    <canvas id="pdf-canvas"></canvas>
-  </div>
+        <div id="cv-navigation">
+            <button id="prev-page" title="Previous Page">&lt; Prev</button>
+            <span id="page-indicator">Page <span id="page-num"></span> of <span id="page-count"></span></span>
+            <button id="next-page" title="Next Page">Next &gt;</button>
+            <span id="loading-indicator">Rendering...</span>
+        </div>
+
+        <canvas id="pdf-canvas"></canvas>
+    </div>
 </main>
 
 <!-- The footer component will be loaded here -->
@@ -114,131 +151,164 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script>
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;
 
-  const url = 'assets/Jack_Morgan_CV.pdf';
+    // --- MODIFIED ---
+    // Store CV paths in an object for easy access
+    const cvPaths = {
+        unity: 'assets/CV/Jack_Morgan_Game_Developer_CV.pdf',
+        cyber: 'assets/CV/Jack_Morgan_Cybersecurity_CV.pdf',
+        it: 'assets/CV/Jack_Morgan_IT_CV.pdf'
+    };
 
-  // Increased quality multiplier for guaranteed sharpness
-  const QUALITY_MULTIPLIER = 2.5;
+    // Set the default CV to load
+    let currentCvUrl = cvPaths.unity;
+    // --- END MODIFIED ---
 
-  let pdfDoc = null,
-          pageNum = 1,
-          pageRendering = false,
-          pageNumPending = null,
-          // For debouncing the resize event
-          resizeTimer = null;
+    const QUALITY_MULTIPLIER = 2.5;
 
-  const canvas = document.getElementById('pdf-canvas'),
-          ctx = canvas.getContext('2d'),
-          container = document.getElementById('cv-viewer-container'),
-          pageNumDisplay = document.getElementById('page-num'),
-          pageCountDisplay = document.getElementById('page-count'),
-          prevButton = document.getElementById('prev-page'),
-          nextButton = document.getElementById('next-page'),
-          loadingIndicator = document.getElementById('loading-indicator');
+    let pdfDoc = null,
+        pageNum = 1,
+        pageRendering = false,
+        pageNumPending = null,
+        resizeTimer = null;
 
-  const updateNavButtons = () => {
-    if (!pdfDoc) return;
-    prevButton.disabled = pageNum <= 1;
-    nextButton.disabled = pageNum >= pdfDoc.numPages;
-  };
+    const canvas = document.getElementById('pdf-canvas'),
+        ctx = canvas.getContext('2d'),
+        container = document.getElementById('cv-viewer-container'),
+        pageNumDisplay = document.getElementById('page-num'),
+        pageCountDisplay = document.getElementById('page-count'),
+        prevButton = document.getElementById('prev-page'),
+        nextButton = document.getElementById('next-page'),
+        loadingIndicator = document.getElementById('loading-indicator'),
+        // --- NEW ---
+        cvSelectionContainer = document.getElementById('cv-selection');
 
-  /**
-   * Rendering a page with perfect clarity and responsiveness.
-   * @param {number} num The page number to render.
-   */
-  const renderPage = num => {
-    pageRendering = true;
-    document.body.classList.add('rendering');
-    loadingIndicator.style.display = 'inline';
 
-    pdfDoc.getPage(num).then(page => {
-      const devicePixelRatio = window.devicePixelRatio || 1;
+    const updateNavButtons = () => {
+        if (!pdfDoc) return;
+        prevButton.disabled = pageNum <= 1;
+        nextButton.disabled = pageNum >= pdfDoc.numPages;
+    };
 
-      // 1. Get the viewport at a base scale of 1
-      const viewport = page.getViewport({ scale: 1 });
+    const renderPage = num => {
+        pageRendering = true;
+        document.body.classList.add('rendering');
+        loadingIndicator.style.display = 'inline';
 
-      // 2. Determine the final display width of the canvas (it's the container's width)
-      const displayWidth = container.clientWidth;
+        pdfDoc.getPage(num).then(page => {
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            const viewport = page.getViewport({ scale: 1 });
+            const displayWidth = container.clientWidth;
+            const fitScale = displayWidth / viewport.width;
+            const renderScale = fitScale * devicePixelRatio * QUALITY_MULTIPLIER;
+            const renderViewport = page.getViewport({ scale: renderScale });
 
-      // 3. Calculate the scale required to fit the PDF page width to the display width
-      const fitScale = displayWidth / viewport.width;
+            canvas.width = renderViewport.width;
+            canvas.height = renderViewport.height;
 
-      // 4. Calculate the final, high-quality rendering scale
-      const renderScale = fitScale * devicePixelRatio * QUALITY_MULTIPLIER;
+            canvas.style.width = `${displayWidth}px`;
+            canvas.style.height = `${(displayWidth / viewport.width) * viewport.height}px`;
 
-      // 5. Get the high-resolution viewport
-      const renderViewport = page.getViewport({ scale: renderScale });
+            const renderContext = { canvasContext: ctx, viewport: renderViewport };
+            const renderTask = page.render(renderContext);
 
-      // 6. Set the canvas's internal bitmap size to these high-res dimensions
-      canvas.width = renderViewport.width;
-      canvas.height = renderViewport.height;
+            renderTask.promise.then(() => {
+                pageRendering = false;
+                document.body.classList.remove('rendering');
+                loadingIndicator.style.display = 'none';
+                updateNavButtons();
+                if (pageNumPending !== null) {
+                    renderPage(pageNumPending);
+                    pageNumPending = null;
+                }
+            });
+        });
 
-      // 7. Set the canvas's CSS display size to fit the container perfectly
-      canvas.style.width = `${displayWidth}px`;
-      canvas.style.height = `${(displayWidth / viewport.width) * viewport.height}px`;
+        pageNumDisplay.textContent = num;
+    };
 
-      const renderContext = { canvasContext: ctx, viewport: renderViewport };
-      const renderTask = page.render(renderContext);
-
-      renderTask.promise.then(() => {
-        pageRendering = false;
-        document.body.classList.remove('rendering');
-        loadingIndicator.style.display = 'none';
-
-        updateNavButtons();
-
-        if (pageNumPending !== null) {
-          renderPage(pageNumPending);
-          pageNumPending = null;
+    const queueRenderPage = num => {
+        if (pageRendering) {
+            pageNumPending = num;
+        } else {
+            renderPage(num);
         }
-      });
+    };
+
+    const onPrevPage = () => {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+    };
+    prevButton.addEventListener('click', onPrevPage);
+
+    const onNextPage = () => {
+        if (pageNum >= pdfDoc.numPages) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+    };
+    nextButton.addEventListener('click', onNextPage);
+
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (pdfDoc) {
+                queueRenderPage(pageNum);
+            }
+        }, 200);
     });
 
-    pageNumDisplay.textContent = num;
-  };
+    // --- NEW ---
+    /**
+     * Loads a PDF document from a URL and renders the first page.
+     * @param {string} url The path to the PDF file.
+     */
+    const loadPdf = url => {
+        // Reset page number for the new document
+        pageNum = 1;
 
-  const queueRenderPage = num => {
-    if (pageRendering) {
-      pageNumPending = num;
-    } else {
-      renderPage(num);
-    }
-  };
+        // Make sure the canvas is visible and the error message is cleared
+        const existingError = container.querySelector('p.error-message');
+        if (existingError) {
+            existingError.remove();
+            canvas.style.display = 'block';
+        }
 
-  const onPrevPage = () => {
-    if (pageNum <= 1) return;
-    pageNum--;
-    queueRenderPage(pageNum);
-  };
-  prevButton.addEventListener('click', onPrevPage);
 
-  const onNextPage = () => {
-    if (pageNum >= pdfDoc.numPages) return;
-    pageNum++;
-    queueRenderPage(pageNum);
-  };
-  nextButton.addEventListener('click', onNextPage);
+        pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+            pdfDoc = pdfDoc_;
+            pageCountDisplay.textContent = pdfDoc.numPages;
+            renderPage(pageNum);
+        }).catch(error => {
+            console.error("Error loading PDF: ", error);
+            // Hide the canvas and show a more robust error message
+            canvas.style.display = 'none';
+            container.insertAdjacentHTML('beforeend', `<p class="error-message" style="text-align:center; color:red;">Failed to load CV. Please check the file path and try again.</p>`);
+        });
+    };
 
-  // NEW: Debounced resize handler
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      if (pdfDoc) {
-        // Re-render the current page with the new dimensions
-        queueRenderPage(pageNum);
-      }
-    }, 200); // Wait 200ms after resize stops before re-rendering
-  });
+    // --- NEW ---
+    // Event listener for the CV selection buttons
+    cvSelectionContainer.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const newCvPath = e.target.getAttribute('data-cv-path');
+            if (newCvPath && newCvPath !== currentCvUrl) {
+                // Update the active button
+                cvSelectionContainer.querySelector('button.active').classList.remove('active');
+                e.target.classList.add('active');
 
-  pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
-    pdfDoc = pdfDoc_;
-    pageCountDisplay.textContent = pdfDoc.numPages;
-    renderPage(pageNum);
-  }).catch(error => {
-    console.error("Error loading PDF: ", error);
-    container.innerHTML = `<p style="text-align:center; color:red;">Failed to load CV. Please check the file path and try again.</p>`;
-  });
+                // Load the new CV
+                currentCvUrl = newCvPath;
+                loadPdf(currentCvUrl);
+            }
+        }
+    });
+
+    // --- MODIFIED ---
+    // Initial load of the default CV
+    loadPdf(currentCvUrl);
+    // --- END MODIFIED ---
 
 </script>
 

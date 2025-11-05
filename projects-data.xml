@@ -30,7 +30,7 @@ As Lead Gameplay Programmer & Lead QA Tester at Cosmic Sabbath on Have You Seen 
             </store>
             <store>
                 <name>Steam</name>
-                <url>#</url> <!-- Add your Steam URL when available -->
+                <url>https://store.steampowered.com/app/4055130/Have_You_Seen_This_Man/</url> <!-- Add your Steam URL when available -->
             </store>
         </storeLinks>
 
@@ -64,6 +64,66 @@ As Lead Gameplay Programmer & Lead QA Tester at Cosmic Sabbath on Have You Seen 
         </tags>
         <startDate>May 2025</startDate>
         <endDate>Present</endDate>
+    </project>
+
+    <project>
+        <title>Echoes in the Dark - Unity 𝟯𝗗 𝗦𝘁𝗲𝗮𝗹𝘁𝗵 𝗚𝗮𝗺𝗲: 𝗛𝗮𝘂𝗻𝘁𝗲𝗱 𝗛𝗼𝘂𝘀𝗲 Course</title>
+        <description><![CDATA[
+The project is built on the foundation of the excellent "𝟯𝗗 𝗦𝘁𝗲𝗮𝗹𝘁𝗵 𝗚𝗮𝗺𝗲: 𝗛𝗮𝘂𝗻𝘁𝗲𝗱 𝗛𝗼𝘂𝘀𝗲" course from 𝗨𝗻𝗶𝘁𝘆 𝗟𝗲𝗮𝗿𝗻, which I used as a base to add my own personal touches and spooky surprises. It was a fantastic way to practice level design, C# scripting, and atmospheric storytelling.
+]]></description>
+
+
+        <!-- The primary image for the project card -->
+        <thumbnail>assets/Projects/Echoes_In_The_Dark_Unity_3D_Stealth_Game_Jack_Morgan.png</thumbnail>
+
+        <!-- NEW: Gallery for multiple screenshots -->
+        <gallery>
+            <image>assets/Projects/Echoes_In_The_Dark_Unity_3D_Stealth_Game_Jack_Morgan.png</image> <!-- COVER -->
+            <image>assets/Projects/Echoes_In_The_Dark_Pic_1.png</image>
+            <image>assets/Projects/Echoes_In_The_Dark_Pic_2.png</image>
+            <image>assets/Projects/Echoes_In_The_Dark_Pic_3.png</image>
+            <image>assets/Projects/Echoes_In_The_Dark_Pic_4.png</image>
+            <image>assets/Projects/Echoes_In_The_Dark_Pic_5.png</image>
+
+        </gallery>
+
+        <trailer>https://youtu.be/U0nTIFnpOaY</trailer>
+
+        <!-- REPLACED: <storeLink> is now <storeLinks> to support multiple stores -->
+        <storeLinks>
+            <store>
+                <name>Unity Play</name>
+                <url>https://play.unity.com/en/games/3ba6a257-caa1-476a-beb9-10016a49fd10/webbuilds</url>
+            </store>
+        </storeLinks>
+
+        <website/>
+        <projectCategory>Academic</projectCategory>
+        <projectType>Game</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines>
+            <engine>Unity</engine>
+        </engines>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>C#</language>
+        </languages>
+        <tags>
+            <Mechanics>
+                <tag>AI Waypoint Pathfinding</tag>
+                <tag>Player Detection Collisions</tag>
+                <tag>Win and Lose Conditions using Collisions</tag>
+            </Mechanics>
+            <Software>
+                <tag>Unity</tag>
+                <tag>Git</tag>
+                <tag>Unity Learn</tag>
+            </Software>
+        </tags>
+        <startDate>October 2025</startDate>
+        <endDate>October 2025</endDate>
     </project>
 
     <project>
