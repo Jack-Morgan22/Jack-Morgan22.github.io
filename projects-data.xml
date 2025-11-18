@@ -67,6 +67,164 @@ As Lead Gameplay Programmer & Lead QA Tester at Cosmic Sabbath on Have You Seen 
     </project>
 
     <project>
+        <title>Wrekin AV E-commerce Store</title>
+        <description><![CDATA[
+As the founder and CEO of Wrekin AV, I built and manage a startup e-commerce business from the ground up. My responsibilities cover all business operations, including long-term strategy, product sourcing, and full management of the Prestashop store. I handle all brand and creative direction, designing logos, graphics, and social media content using Adobe Photoshop and Illustrator. I also lead the digital marketing strategy, running social media campaigns and managing ongoing SEO improvements through Google Merchant Centre to grow Wrekin AV into a trusted brand.
+]]></description>
+        <thumbnail>assets/Projects/Wrekin_AV_Store_Thumbnail.png</thumbnail>
+        <gallery>
+            <image>assets/Projects/Wrekin_AV_E-Comerce_Store_Image_1.png</image> <!-- COVER -->
+            <image>assets/Projects/Wrekin_AV_E-Comerce_Store_Image_2.png</image>
+            <image>assets/Projects/Wrekin_AV_E-Comerce_Store_Image_3.png</image>
+            <image>assets/Projects/Wrekin_AV_E-Comerce_Store_Image_4.png</image>
+        </gallery>
+        <trailer></trailer>
+        <storeLinks>
+            <store>
+                <name>Visit Store</name>
+                <url>https://wrekinav.co.uk/</url>
+            </store>
+        </storeLinks>
+        <projectCategory>Professional</projectCategory>
+        <projectType>E-commerce</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>Web</platform>
+        </platforms>
+        <languages/>
+        <tags>
+            <Business-Management>
+                <tag>CEO &amp; Founder</tag>
+                <tag>E-commerce Management</tag>
+                <tag>Business Strategy</tag>
+                <tag>Project Management</tag>
+                <tag>Product Sourcing</tag>
+            </Business-Management>
+            <Design-Marketing>
+                <tag>Graphic Design</tag>
+                <tag>Brand Development</tag>
+                <tag>SEO</tag>
+                <tag>Social Media Marketing</tag>
+            </Design-Marketing>
+            <Software>
+                <tag>Prestashop</tag>
+                <tag>Adobe Photoshop</tag>
+                <tag>Adobe Illustrator</tag>
+                <tag>Google Merchant Centre</tag>
+                <tag>Trello</tag>
+            </Software>
+        </tags>
+        <startDate>September 2025</startDate>
+        <endDate>Present</endDate>
+    </project>
+
+    <project>
+        <title>Wrekin AV App Suite</title>
+        <description><![CDATA[
+To support and automate operations for Wrekin AV, I designed and developed a custom suite of internal applications from scratch using Python and PyCharm. These tools were built to solve specific business challenges and dramatically increase workflow efficiency. The suite includes a Price and Stock Updater with margin controls, an Image Downloader and CSV Image Updater, SEO data extraction tools, and various CSV formatting and import generators. This project demonstrates my ability to identify inefficiencies and build targeted, practical software solutions.
+]]></description>
+        <thumbnail>assets/Projects/Wrekin_AV_App_Suite_Thumbnail.png</thumbnail>
+        <gallery>
+            <image>assets/Projects/Wrekin_AV_App_Suite_Cover.png</image> <!-- COVER -->
+            <image>assets/Projects/Wrekin_AV_App_Suite_Image_1.png</image>
+            <image>assets/Projects/Wrekin_AV_App_Suite_Image_2.png</image>
+            <image>assets/Projects/Wrekin_AV_App_Suite_Image_3.png</image>
+            <image>assets/Projects/Wrekin_AV_App_Suite_Image_4.png</image>
+        </gallery>
+        <trailer></trailer>
+        <storeLinks/>
+        <website/>
+        <projectCategory>Professional</projectCategory>
+        <projectType>Software</projectType>
+        <collaborationType>Solo</collaborationType>
+        <engines/>
+        <platforms>
+            <platform>PC</platform>
+        </platforms>
+        <languages>
+            <language>Python</language>
+        </languages>
+        <tags>
+            <Software-Development>
+                <tag>Internal Tooling</tag>
+                <tag>Process Automation</tag>
+                <tag>Data Management</tag>
+                <tag>Application Development</tag>
+                <tag>Problem-Solving</tag>
+            </Software-Development>
+            <Software>
+                <tag>Python</tag>
+                <tag>PyCharm</tag>
+                <tag>GitHub</tag>
+            </Software>
+        </tags>
+        <startDate>September 2025</startDate>
+        <endDate>Present</endDate>
+    </project>
+
+    <project>
+    <title>TimeHopp: Shattered Timeline</title>
+    <description><![CDATA[
+As Project Manager and Lead Programmer for Team Golden Age, I led the development of "TimeHopp: Shattered Timeline," our entry for the Unity 20th Anniversary Game Jam. Created in just 48 hours with Louise Jamieson and Callum Moffat, our 3D puzzle adventure tackled the theme "Timeless." I was responsible for project coordination, version control using GitHub, and implementing all core gameplay systems. This included the game loop architecture, enemy AI with patrol and chase behaviours using Unity's NavMesh, and dynamic spotlight hazards with raycasting for line-of-sight detection. Our efforts resulted in a ranking of #208 out of 437 entries, with a notable #117 in Narrative Design.
+]]></description>
+
+    <!-- The primary image for the project card -->
+    <thumbnail>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_COVER.png</thumbnail>
+
+    <!-- NEW: Gallery for multiple screenshots -->
+    <gallery>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_COVER.png</image> <!-- COVER -->
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAME_JAM_RESULTS.jpg</image>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAMEPLAY_1.png</image>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAMEPLAY_2.png</image>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAMEPLAY_3.png</image>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAMEPLAY_4.png</image>
+        <image>assets/Projects/TIMEHOPP_SHATTERED_TIMELINE_GAMEPLAY_5.png</image>
+    </gallery>
+
+    <!-- REPLACED: <storeLink> is now <storeLinks> to support multiple stores -->
+    <storeLinks>
+        <store>
+            <name>Itch.io</name>
+            <url>https://jackmorgan22.itch.io/timehopp-shattered-timeline</url>
+        </store>
+    </storeLinks>
+
+    <website/>
+    <projectCategory>Personal</projectCategory>
+    <projectType>Game</projectType>
+    <collaborationType>Collaborative</collaborationType>
+    <engines>
+        <engine>Unity</engine>
+    </engines>
+    <platforms>
+        <platform>PC</platform>
+    </platforms>
+    <languages>
+        <language>C#</language>
+    </languages>
+    <tags>
+        <Mechanics>
+            <tag>Project Management</tag>
+            <tag>Leadership</tag>
+            <tag>Game Loop Architecture</tag>
+            <tag>Enemy AI</tag>
+            <tag>Gameplay Mechanics Development</tag>
+            <tag>Rapid Prototyping</tag>
+        </Mechanics>
+        <Software>
+            <tag>Unity</tag>
+            <tag>Git</tag>
+            <tag>GitHub</tag>
+            <tag>Discord</tag>
+        </Software>
+    </tags>
+    <startDate>November 2025</startDate>
+    <endDate>November 2025</endDate>
+</project>
+
+    <project>
         <title>Echoes in the Dark - Unity 𝟯𝗗 𝗦𝘁𝗲𝗮𝗹𝘁𝗵 𝗚𝗮𝗺𝗲: 𝗛𝗮𝘂𝗻𝘁𝗲𝗱 𝗛𝗼𝘂𝘀𝗲 Course</title>
         <description><![CDATA[
 The project is built on the foundation of the excellent "𝟯𝗗 𝗦𝘁𝗲𝗮𝗹𝘁𝗵 𝗚𝗮𝗺𝗲: 𝗛𝗮𝘂𝗻𝘁𝗲𝗱 𝗛𝗼𝘂𝘀𝗲" course from 𝗨𝗻𝗶𝘁𝘆 𝗟𝗲𝗮𝗿𝗻, which I used as a base to add my own personal touches and spooky surprises. It was a fantastic way to practice level design, C# scripting, and atmospheric storytelling.
