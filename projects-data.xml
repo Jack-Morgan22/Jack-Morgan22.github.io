@@ -17,6 +17,7 @@
             <store><name>Itch.io</name><url>https://cosmic-sabbath.itch.io/have-you-seen-this-man</url></store>
             <store><name>Steam</name><url>https://store.steampowered.com/app/4055130/Have_You_Seen_This_Man/</url></store>
         </storeLinks>
+        <website>assets/PDF/Have_You_Seen_This_Man_Gameplay_Programmer_Documentation_Jack_Morgan.pdf</website>
         <projectCategory>Professional</projectCategory>
         <projectType>Game</projectType>
         <collaborationType>Collaborative</collaborationType>
