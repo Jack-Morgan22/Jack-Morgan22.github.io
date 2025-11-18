@@ -128,7 +128,13 @@
 
 <main>
     <div id="cv-viewer-container">
-        <!-- CORRECTED: CV Selection Buttons -->
+        <!-- NEW Informative Header -->
+        <div style="text-align: center; margin-bottom: 2rem; color: #333;">
+            <h1 style="font-family: 'Orbitron', sans-serif; color: #333; margin-bottom: 0.5rem;">My CVs</h1>
+            <p style="font-family: 'Roboto Mono', monospace; max-width: 600px; margin: auto;">To best showcase my relevant skills for different roles, I have tailored my CV for each of my key areas of interest. Please select the version most relevant to you.</p>
+        </div>
+
+        <!-- CV Selection Buttons -->
         <div id="cv-selection">
             <button class="active" data-cv-path="assets/CV/Jack_Morgan_Game_Developer_CV.pdf">Unity / Game Developer</button>
             <button data-cv-path="assets/CV/Jack_Morgan_Cybersecurity_CV.pdf">CyberSecurity</button>
@@ -153,18 +159,13 @@
 <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;
 
-    // --- MODIFIED ---
-    // Store CV paths in an object for easy access
     const cvPaths = {
         unity: 'assets/CV/Jack_Morgan_Game_Developer_CV.pdf',
         cyber: 'assets/CV/Jack_Morgan_Cybersecurity_CV.pdf',
         it: 'assets/CV/Jack_Morgan_IT_CV.pdf'
     };
 
-    // Set the default CV to load
     let currentCvUrl = cvPaths.unity;
-    // --- END MODIFIED ---
-
     const QUALITY_MULTIPLIER = 2.5;
 
     let pdfDoc = null,
@@ -181,7 +182,6 @@
         prevButton = document.getElementById('prev-page'),
         nextButton = document.getElementById('next-page'),
         loadingIndicator = document.getElementById('loading-indicator'),
-        // --- NEW ---
         cvSelectionContainer = document.getElementById('cv-selection');
 
 
@@ -236,45 +236,21 @@
         }
     };
 
-    const onPrevPage = () => {
-        if (pageNum <= 1) return;
-        pageNum--;
-        queueRenderPage(pageNum);
-    };
+    const onPrevPage = () => { if (pageNum <= 1) return; pageNum--; queueRenderPage(pageNum); };
     prevButton.addEventListener('click', onPrevPage);
 
-    const onNextPage = () => {
-        if (pageNum >= pdfDoc.numPages) return;
-        pageNum++;
-        queueRenderPage(pageNum);
-    };
+    const onNextPage = () => { if (pageNum >= pdfDoc.numPages) return; pageNum++; queueRenderPage(pageNum); };
     nextButton.addEventListener('click', onNextPage);
 
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            if (pdfDoc) {
-                queueRenderPage(pageNum);
-            }
-        }, 200);
+        resizeTimer = setTimeout(() => { if (pdfDoc) { queueRenderPage(pageNum); } }, 200);
     });
 
-    // --- NEW ---
-    /**
-     * Loads a PDF document from a URL and renders the first page.
-     * @param {string} url The path to the PDF file.
-     */
     const loadPdf = url => {
-        // Reset page number for the new document
         pageNum = 1;
-
-        // Make sure the canvas is visible and the error message is cleared
         const existingError = container.querySelector('p.error-message');
-        if (existingError) {
-            existingError.remove();
-            canvas.style.display = 'block';
-        }
-
+        if (existingError) { existingError.remove(); canvas.style.display = 'block'; }
 
         pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
             pdfDoc = pdfDoc_;
@@ -282,34 +258,24 @@
             renderPage(pageNum);
         }).catch(error => {
             console.error("Error loading PDF: ", error);
-            // Hide the canvas and show a more robust error message
             canvas.style.display = 'none';
             container.insertAdjacentHTML('beforeend', `<p class="error-message" style="text-align:center; color:red;">Failed to load CV. Please check the file path and try again.</p>`);
         });
     };
 
-    // --- NEW ---
-    // Event listener for the CV selection buttons
     cvSelectionContainer.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const newCvPath = e.target.getAttribute('data-cv-path');
             if (newCvPath && newCvPath !== currentCvUrl) {
-                // Update the active button
                 cvSelectionContainer.querySelector('button.active').classList.remove('active');
                 e.target.classList.add('active');
-
-                // Load the new CV
                 currentCvUrl = newCvPath;
                 loadPdf(currentCvUrl);
             }
         }
     });
 
-    // --- MODIFIED ---
-    // Initial load of the default CV
     loadPdf(currentCvUrl);
-    // --- END MODIFIED ---
-
 </script>
 
 <!-- Scripts -->
