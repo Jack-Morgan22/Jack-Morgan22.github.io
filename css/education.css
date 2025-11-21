@@ -2,21 +2,26 @@
 
 /* --- Education Page Specific Styles --- */
 
-/* Added a subtle vignette background to focus attention */
+/* Body: Added a darker vignette for focus */
 body {
-    background: radial-gradient(ellipse at center, var(--surface-color) 0%, var(--background-color) 70%);
+    background: radial-gradient(circle at center, #1e1e24 0%, #000000 100%);
+    min-height: 100vh;
 }
 
-/* Main headline style for the page */
+/* Main headline style */
 .page-headline {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    animation: fadeInDown 1s ease-out;
 }
 
 .page-headline h1 {
     font-size: 2.5rem;
-    text-shadow: 0 0 10px var(--primary-color-glow), 0 0 20px rgba(0, 255, 204, 0.3);
+    /* Text Glow Effect */
+    text-shadow: 0 0 10px var(--primary-color-glow), 0 0 20px rgba(0, 255, 204, 0.2);
     margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 .page-headline p {
@@ -24,30 +29,32 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 
-/* --- Timeline Container (Skill Tree Trunk) --- */
+/* --- Timeline Container --- */
 .timeline {
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 0 6rem 0;
+    overflow: hidden; /* Prevents animation scrollbars */
 }
 
-/* The vertical line - the trunk of the skill tree */
+/* The vertical trunk line */
 .timeline::after {
     content: '';
     position: absolute;
-    width: 4px; /* Slightly thicker */
+    width: 4px;
     background: linear-gradient(
             to bottom,
             rgba(0,0,0,0) 0%,
-            var(--primary-color) 20%,
-            var(--primary-color) 80%,
+            var(--primary-color) 10%,
+            var(--primary-color) 90%,
             rgba(0,0,0,0) 100%
     );
-    box-shadow: 0 0 20px var(--primary-color-glow);
+    box-shadow: 0 0 15px var(--primary-color-glow);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -56,334 +63,327 @@ body {
 }
 
 
-/* --- Timeline Item (Skill Branch & Node) --- */
+/* --- Timeline Item --- */
 .timeline-item {
     padding: 10px 40px;
     position: relative;
     width: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    /* Initial state for scroll animation */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.timeline-item:nth-child(odd) {
-    left: 0;
+/* Visible state (added by JS) */
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
+.timeline-item:nth-child(odd) { left: 0; }
+.timeline-item:nth-child(even) { left: 50%; }
 
-/* The horizontal connector line from trunk to the card */
+/* Horizontal connector line */
 .timeline-item::before {
     content: '';
     position: absolute;
     top: 39px;
-    width: 50px;
+    width: 60px; /* Slightly longer */
     height: 2px;
     background: var(--primary-color);
-    box-shadow: 0 0 10px var(--primary-color-glow);
+    box-shadow: 0 0 8px var(--primary-color-glow);
     z-index: 1;
+    transition: width 0.3s ease;
 }
 
-.timeline-item:nth-child(odd)::before {
-    right: 30px;
-}
+.timeline-item:nth-child(odd)::before { right: 30px; }
+.timeline-item:nth-child(even)::before { left: 30px; }
 
-.timeline-item:nth-child(even)::before {
-    left: 30px;
-}
-
-/* The dot on the timeline */
+/* Hexagon Timeline Dot */
 .timeline-item::after {
     content: '';
     position: absolute;
-    width: 25px; /* Increased size */
-    height: 28px; /* Adjusted for hexagon ratio */
-    background-color: var(--background-color);
-    border: 3px solid var(--primary-color);
-    top: 28px;
-    border-radius: 0; /* Remove rounding */
+    width: 24px;
+    height: 28px;
+    background-color: #0f0f0f;
+    border: 2px solid var(--primary-color);
+    top: 26px;
     z-index: 2;
-    box-shadow: 0 0 20px var(--primary-color-glow);
-    transition: all 0.4s ease;
-    /* Hexagon shape */
+    box-shadow: 0 0 15px var(--primary-color-glow);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.4s ease;
 }
 
-.timeline-item:nth-child(odd)::after {
-    right: -14px;
-}
-
-.timeline-item:nth-child(even)::after {
-    left: -14px;
-}
-
-/* Animate the node on hover like unlocking a skill */
-@keyframes spin-glow {
-    0% { transform: rotate(0deg); box-shadow: 0 0 20px var(--primary-color-glow); }
-    100% { transform: rotate(360deg); box-shadow: 0 0 35px 5px var(--primary-color-glow); }
-}
+.timeline-item:nth-child(odd)::after { right: -12px; }
+.timeline-item:nth-child(even)::after { left: -12px; }
 
 .timeline-item:hover::after {
     background-color: var(--primary-color);
-    transform: rotate(360deg);
-    box-shadow: 0 0 35px 5px var(--primary-color-glow);
+    transform: scale(1.3) rotate(180deg);
+    box-shadow: 0 0 30px 5px var(--primary-color-glow);
 }
 
-/* -- Skill Description Panel -- */
 
-/* Wrapper for the glowing gradient border effect */
+/* --- Timeline Content Card --- */
+
 .timeline-card-wrapper {
     position: relative;
-    padding: 3px; /* Controls the border thickness */
-    overflow: hidden;
-    /* Angular shape for the wrapper */
+    padding: 1px; /* Creates a thin elegant border */
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    background: linear-gradient(145deg, rgba(0,255,204,0.3), rgba(0,0,0,0), rgba(0,255,204,0.1));
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* The gradient that forms the border */
-.timeline-card-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: conic-gradient(
-            var(--primary-color),
-            var(--primary-color-glow),
-            var(--primary-color),
-            #333, /* Dark part of the border */
-            #333,
-            var(--primary-color)
-    );
-    z-index: -1;
-    transition: transform 0.5s ease;
-}
-
-/* The content card is now simpler, placed inside the wrapper */
 .timeline-content {
     padding: 30px;
-    background-color: #1a1a1a; /* Darker, more contrasty */
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    /* Same angular shape as the wrapper, but slightly smaller */
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
-}
+    /* Glassmorphism Background */
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
 
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 19px), calc(100% - 19px) 100%, 0 100%);
+}
 
 .timeline-item:hover .timeline-card-wrapper {
-    transform: translateY(-5px);
+    transform: scale(1.02);
 }
 
-.timeline-item:hover .timeline-card-wrapper::before {
-    /* Spin the gradient on hover for a cool effect */
-    transform: rotate(180deg);
-}
-
-/* Icon for each major step in the timeline */
+/* Floating Icons */
 .timeline-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     font-size: 3rem;
-    opacity: 0.1;
+    opacity: 0.05;
     color: var(--primary-color);
-    text-shadow: 0 0 15px var(--primary-color);
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease;
 }
-
 .timeline-item:hover .timeline-icon {
-    opacity: 0.25;
+    opacity: 0.2;
+    transform: rotate(-10deg);
 }
 
-
-/* Styling content inside the card */
+/* Typography within Card */
 .timeline-content h2 {
-    margin-top: 0;
-    margin-bottom: 0.25rem;
-    font-size: 1.5rem;
-    color: #fff; /* Ensure high contrast */
+    margin: 0 0 5px 0;
+    font-size: 1.6rem;
+    color: #fff;
 }
 
 .timeline-date {
-    font-family: var(--font-secondary);
-    color: var(--primary-color); /* Highlight the date */
-    font-size: 0.9rem;
+    font-family: monospace;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.6;
     margin-bottom: 1rem;
-    display: block;
 }
 
-.timeline-content p, .timeline-content ul {
-    margin-bottom: 0;
-}
-
-.timeline-content ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
+/* Standard lists (Education highlights) */
 .timeline-content ul li {
-    padding: 8px 0;
+    margin-bottom: 0.5rem;
     padding-left: 20px;
     position: relative;
+    color: #ccc;
+    font-size: 0.95rem;
 }
-
-/* Using a more tech-y bullet point */
 .timeline-content ul li::before {
-    content: '»';
+    content: '>';
     color: var(--primary-color);
     position: absolute;
     left: 0;
-    top: 8px; /* Keep this value for the old structure */
     font-weight: bold;
 }
 
 
-/* --- Tags for Modules & Certs (Data Chips) --- */
+/* --- Tags (Skills/Tools) --- */
 .tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1rem;
+    gap: 10px;
+    margin-top: 1.5rem;
 }
 
 .tag {
-    /* Flexbox for alignment */
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between logo and text */
-
-    background: rgba(45, 45, 45, 0.8);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--text-muted-color);
-    padding: 6px 14px;
-    border-radius: 0;
-    font-size: 0.8rem;
+    padding: 5px 12px;
+    font-size: 0.75rem;
     font-family: var(--font-secondary);
-    border: 1px solid #333;
+    border: 1px solid transparent;
     transition: all 0.3s ease;
-    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 0 100%);
-    white-space: nowrap;
+    cursor: default;
+}
+
+.tag img {
+    height: 14px;
+    width: auto;
+    filter: grayscale(1);
+    transition: filter 0.3s;
 }
 
 .tag:hover {
-    background: var(--primary-color);
-    color: var(--background-color);
     border-color: var(--primary-color);
-    transform: scale(1.05); /* Add a slight pop */
-}
-
-/* Styles for Brand Logos in Tags */
-.tag img {
-    height: 16px; /* Control the logo size */
-    width: auto;
-    /* Make logos monochrome to fit the theme, but brighten them slightly */
-    filter: grayscale(1) brightness(1.5);
-    transition: filter 0.3s ease;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
 }
 
 .tag:hover img {
-    /* On hover, restore the original logo colors */
     filter: none;
 }
 
 
-/* --- Certification Card Enhancements --- */
+/* --- CERTIFICATIONS (Major Enhancements) --- */
 
-/* Style for each category block (Game Dev, Programming, etc.) */
 .certification-category {
-    padding-top: 1rem;
-    margin-top: 1.5rem;
-    border-top: 1px dashed #333; /* Subtle separator */
-}
-.certification-category:first-of-type {
-    margin-top: 1rem;
-    padding-top: 0;
-    border-top: none; /* No separator for the first category */
+    margin-top: 2rem;
 }
 
-/* Sub-headings within the card */
-.timeline-content h3 {
-    color: var(--primary-color);
-    font-family: var(--font-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.certification-category h3 {
     font-size: 0.9rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    opacity: 0.9;
 }
 
-/* Override for the new structured list items */
+.certification-category ul {
+    padding: 0;
+}
+
+/* New grid-like structure for Certs */
 .certification-category ul li {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid #222;
-    padding-left: 0;
+    flex-direction: column; /* Title on top, meta below */
+    gap: 8px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .certification-category ul li:last-child {
     border-bottom: none;
 }
 
-/* Hide the old bullet point for the new structure */
-.certification-category ul li::before {
-    display: none;
-}
+/* Hide default bullets */
+.certification-category ul li::before { content: none; }
 
 .cert-title {
-    font-weight: 500;
-    color: #eee;
-    flex-grow: 1; /* Pushes metadata to the right cleanly */
+    font-weight: 600;
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.3;
 }
 
+/* Container for Date, Logo, and Button */
 .cert-meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between; /* Spreads button to right */
+    gap: 15px;
+    width: 100%;
+}
+
+/* Left side of Meta (Date + Tag) */
+.cert-info-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .cert-date {
-    font-family: var(--font-secondary);
-    color: var(--text-muted-color);
-    font-size: 0.85rem;
-    white-space: nowrap;
+    font-size: 0.8rem;
+    color: #888;
+    font-family: monospace;
+}
+
+/* --- NEW Credential Button Style --- */
+.credential-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.credential-btn:hover {
+    background: var(--primary-color);
+    color: #000; /* High contrast text on hover */
+    box-shadow: 0 0 15px var(--primary-color-glow);
+}
+
+.credential-btn svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor; /* Adapt to text color */
 }
 
 
-/* --- Responsive Design for Timeline --- */
+/* --- Responsive Adjustments --- */
 @media screen and (max-width: 900px) {
-    .page-headline h1 {
-        font-size: 2rem;
-    }
+    /* Title shrinking */
+    .page-headline h1 { font-size: 2rem; }
 
-    .timeline::after {
-        left: 20px;
-    }
+    /* Straighten timeline for mobile */
+    .timeline::after { left: 25px; }
 
     .timeline-item {
         width: 100%;
-        padding-left: 65px;
+        padding-left: 70px;
         padding-right: 15px;
-        left: 0 !important;
     }
 
-    .timeline-item::after {
-        left: 8px;
-    }
+    .timeline-item:nth-child(even) { left: 0; }
 
-    .timeline-item::before {
-        display: none;
-    }
+    .timeline-item::before { left: 25px !important; width: 35px; }
+    .timeline-item::after { left: 13px !important; } /* Center on line */
 
-    /* Make certification rows stack cleanly on mobile */
-    .certification-category ul li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
+    /* Stack cert meta */
     .cert-meta {
-        margin-top: 0.25rem;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
     }
+
+    .credential-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Simple animation keyframe */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

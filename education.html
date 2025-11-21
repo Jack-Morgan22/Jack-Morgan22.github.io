@@ -8,6 +8,71 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/Global.css">
     <link rel="stylesheet" href="css/education.css">
+
+    <!-- PDF Viewer Styles -->
+    <style>
+        .pdf-viewer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: none; /* JS toggles this to flex */
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pdf-viewer-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .pdf-viewer-content {
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            background: #1a1a1a;
+            border: 1px solid var(--primary-color, #00ffcc);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+            border-radius: 4px;
+        }
+
+        .pdf-viewer-close {
+            background: var(--primary-color, #00ffcc);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+
+        .pdf-viewer-close:hover {
+            background: #fff;
+        }
+
+        .pdf-embed-container {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .pdf-embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -39,15 +104,22 @@
                             My dissertation project, <em>Hazard Perception VR</em>, was a Virtual Reality training application developed in Unity for Meta Quest headsets. It aimed to improve road safety by immersing drivers in realistic scenarios, demonstrating the power of VR as an effective educational tool.
                         </p>
                         <div class="tags-container">
-                            <span class="tag">Programming & Problem-Solving</span>
-                            <span class="tag">Cloud Systems</span>
-                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">Introductory Programming & Problem-Solving</span>
+                            <span class="tag">Distributed and Cloud Systems Programming</span>
+                            <span class="tag">Numerical Methods and Concurrency</span>
+                            <span class="tag">Embedded Systems Programming</span>
+                            <span class="tag">Internet Software Architecture</span>
+                            <span class="tag">Computational Mathematics</span>
+                            <span class="tag">Fundamentals of Computing</span>
+                            <span class="tag">Collaborative Development</span>
                             <span class="tag">Robotic Engineering</span>
-                            <span class="tag">Object-Oriented Programming</span>
-                            <span class="tag">Advanced Games Tech</span>
-                            <span class="tag">High-Performance Computing</span>
+                            <span class="tag">Object-Oriented Design and Programming</span>
+                            <span class="tag">Advanced Games Technologies and Programming</span>
+                            <span class="tag">High Performance Computing</span>
                             <span class="tag">Big Data</span>
-                            <span class="tag">Dissertation Project</span>
+                            <span class="tag">Emerging Interactive Technologies</span>
+                            <span class="tag">Academic Skills and Team Based Learning</span>
+                            <span class="tag">Project and Professionalism (Dissertation)</span>
                         </div>
                     </div>
                 </div>
@@ -59,59 +131,68 @@
                     <div class="timeline-content">
                         <span class="timeline-icon">📜</span>
                         <h2>Certifications</h2>
+                        <p>Industry-recognized qualifications demonstrating continued learning and technical validation.</p>
 
                         <!-- Category: Game Development -->
                         <div class="certification-category">
                             <h3>Game Development</h3>
                             <ul>
-
-                                <!-- Certificate: 3D Stealth Game: Haunted House Course -->
                                 <li>
                                     <span class="cert-title">3D Stealth Game: Haunted House Course</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">October 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/unity/ffffff" alt="Unity logo" /> Unity
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/unity/ffffff" alt="Unity logo" /> Unity
+                                            </span>
+                                            <span class="cert-date">Oct 2025</span>
+                                        </div>
+                                        <a href="assets/PDF/3d-stealth-game_-haunted-house-completion-certificate.pdf"
+                                           data-pdf-src="assets/PDF/3d-stealth-game_-haunted-house-completion-certificate.pdf"
+                                           class="credential-btn pdf-link">
+                                            Show Credential
+                                            <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg>
+                                        </a>
                                     </div>
                                 </li>
-                                <!-- /Certificate: 3D Stealth Game: Haunted House Course -->
 
-                                <!-- Certificate: Introduction to Game Design -->
                                 <li>
                                     <span class="cert-title">Introduction to Game Design</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Oct 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/epicgames/ffffff" alt="Epic Games logo" /> Epic Games
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/epicgames/ffffff" alt="Epic Games logo" /> Epic Games
+                                            </span>
+                                            <span class="cert-date">Oct 2025</span>
+                                        </div>
+                                        <a href="https://coursera.org/share/e89d51fb4e620a478e36b84fbe1850e4" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
-                                <!-- /Certificate: Introduction to Game Design -->
 
-                                <!-- Certificate: Introduction to Game Development -->
                                 <li>
                                     <span class="cert-title">Introduction to Game Development</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Aug 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
+                                            </span>
+                                            <span class="cert-date">Aug 2025</span>
+                                        </div>
+                                        <a href="https://www.codecademy.com/profiles/Jack_Morgan22/certificates/fd75291f239d471e81c5a14ff80a27a8" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
-                                <!-- /Certificate: Introduction to Game Development -->
 
-                                <!-- Certificate: Unity Essentials Pathway -->
                                 <li>
                                     <span class="cert-title">Unity Essentials Pathway</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Jan 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/unity/ffffff" alt="Unity logo" /> Unity
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/unity/ffffff" alt="Unity logo" /> Unity
+                                            </span>
+                                            <span class="cert-date">Jan 2025</span>
+                                        </div>
+                                        <a href="https://www.credly.com/badges/e24179b5-3e47-4c67-a766-996f5b60c1d3/linked_in_profile" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
-                                <!-- /Certificate: Unity Essentials Pathway -->
                             </ul>
                         </div>
 
@@ -119,54 +200,104 @@
                         <div class="certification-category">
                             <h3>Programming & Technical Skills</h3>
                             <ul>
+
+                                <li>
+                                    <span class="cert-title">Cybersecurity Essentials</span>
+                                    <div class="cert-meta">
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://img.icons8.com/ios-filled/50/ffffff/ibm.png" alt="IBM logo" /> IBM
+                                            </span>
+                                            <span class="cert-date">Nov 2025</span>
+                                        </div>
+                                        <a href="assets/PDF/Cyber_Security_Awareness_Training_Certificate.pdf"
+                                           data-pdf-src="assets/PDF/Cyber_Security_Awareness_Training_Certificate.pdf"
+                                           class="credential-btn pdf-link">
+                                            Show Credential
+                                            <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg>
+                                        </a>
+                                    </div>
+                                </li>
+
                                 <li>
                                     <span class="cert-title">Intro to the Command Line</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Apr 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
+                                            </span>
+                                            <span class="cert-date">Apr 2025</span>
+                                        </div>
+                                        <a href="https://www.codecademy.com/profiles/Jack_Morgan22/certificates/85cb09c961e0496ea8a2646769272b37" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
+
                                 <li>
                                     <span class="cert-title">Intro to Cloud Computing</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Apr 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
+                                            </span>
+                                            <span class="cert-date">Apr 2025</span>
+                                        </div>
+                                        <a href="https://www.codecademy.com/profiles/Jack_Morgan22/certificates/1353857e7ad5c1d0d578073e0d5e31e4" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
+
                                 <li>
                                     <span class="cert-title">Learn C Skill Path</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Mar 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
+                                            </span>
+                                            <span class="cert-date">Mar 2025</span>
+                                        </div>
+                                        <a href="https://www.codecademy.com/profiles/Jack_Morgan22/certificates/9dba9d9b6bf64cf58b2b416ef9cd0912" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
+
                                 <li>
                                     <span class="cert-title">Fundamentals of Operating Systems</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Mar 2025</span>
-                                        <span class="tag">
-                        <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
-                      </span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://cdn.simpleicons.org/codecademy/ffffff" alt="Codecademy logo" /> Codecademy
+                                            </span>
+                                            <span class="cert-date">Mar 2025</span>
+                                        </div>
+                                        <a href="https://www.codecademy.com/profiles/Jack_Morgan22/certificates/ae1ae475371754beeda65dc1dc02cd08" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
+
+                                <!-- FIXED: Updated to point to PDF in assets/PDF/ -->
                                 <li>
                                     <span class="cert-title">Cyber Security Awareness</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Mar 2024</span>
-                                        <span class="tag">Cyber Quarter</span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">Cyber Quarter</span>
+                                            <span class="cert-date">Mar 2024</span>
+                                        </div>
+                                        <a href="assets/PDF/Cyber_Security_Awareness_Training_Certificate.pdf"
+                                           data-pdf-src="assets/PDF/Cyber_Security_Awareness_Training_Certificate.pdf"
+                                           class="credential-btn pdf-link">
+                                            Show Credential
+                                            <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg>
+                                        </a>
                                     </div>
                                 </li>
+
                                 <li>
                                     <span class="cert-title">IBM MQ Developer Essentials</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Nov 2023</span>
-                                        <span class="tag">IBM</span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">
+                                                <img src="https://img.icons8.com/ios-filled/50/ffffff/ibm.png" alt="IBM logo" /> IBM
+                                            </span>
+                                            <span class="cert-date">Nov 2023</span>
+                                        </div>
+                                        <a href="https://www.credly.com/badges/098fc8d4-d106-40f5-912d-d3fc112da294/linked_in_profile" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
                             </ul>
@@ -179,15 +310,20 @@
                                 <li>
                                     <span class="cert-title">UK Car Driving License</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Jun 2023</span>
-                                        <span class="tag">DVLA</span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">DVLA</span>
+                                            <span class="cert-date">Jun 2023</span>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="cert-title">The Hour of Code</span>
                                     <div class="cert-meta">
-                                        <span class="cert-date">Jun 2015</span>
-                                        <span class="tag">Code.org</span>
+                                        <div class="cert-info-group">
+                                            <span class="tag">Code.org</span>
+                                            <span class="cert-date">Jun 2015</span>
+                                        </div>
+                                        <a href="https://studio.code.org/certificates/eyJuYW1lIjoiIiwiY291cnNlIjoiaG91cm9mY29kZSJ9" target="_blank" class="credential-btn">Show Credential <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-16 0v18h18v-8h-2v6H5V5h6V3"/></svg></a>
                                     </div>
                                 </li>
                             </ul>
@@ -249,11 +385,40 @@
     </div>
 </main>
 
+<!-- PDF Viewer Overlay Container -->
+<div class="pdf-viewer-overlay">
+    <div class="pdf-viewer-content">
+        <button class="pdf-viewer-close">Close [X]</button>
+        <div class="pdf-embed-container"></div>
+    </div>
+</div>
+
 <!-- Footer -->
 <footer id="footer-placeholder"></footer>
 
 <!-- Scripts -->
 <script src="js/nav_loader.js"></script>
+<script src="js/pdf-viewer.js"></script>
+
+<!-- Interaction Script for Scroll Animations -->
+<script>
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        observer.observe(item);
+    });
+</script>
 
 </body>
 </html>
